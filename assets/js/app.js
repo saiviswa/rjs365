@@ -18,24 +18,32 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider',
                     css: 'assets/css/main.css'
                 }
             })
-            .state('real-estate', {
-                url: "/real-estate",
+            .state('about-us', {
+                url: "/about-us",
                 views: {
                     "headerContent": {
                         templateUrl: "views/layout/header.html"
                     },
-                    "imageContent": {
-                        templateUrl: "views/partial/real_estate_image.html"
-                    },
                     "mainContent": {
-                        templateUrl: "views/partial/real_estate.html"
-                    },
-                    "footerContent": {
-                        templateUrl: "views/layout/footer.html"
+                        templateUrl: "views/partial/about-us.html"
                     }
                 },
                 data: {
-                    css: 'assets/css/real_estate.css'
+                    css: 'assets/css/main.css'
+                }
+            })
+            .state('more-about-us', {
+                url: "/more-about-us",
+                views: {
+                    "headerContent": {
+                        templateUrl: "views/layout/header.html"
+                    },
+                    "mainContent": {
+                        templateUrl: "views/partial/about-us-more.html"
+                    }
+                },
+                data: {
+                    css: 'assets/css/main.css'
                 }
             });
         $urlRouterProvider.otherwise("home");

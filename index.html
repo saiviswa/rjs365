@@ -30,18 +30,18 @@
 
         </header>
         <ul id="slider-div">
-            <li class="icn_slider active">
-                <a href="">
+            <li class="icn_slider" ng-class="{'active' : curPage == 'home'}">
+                <a ng-href="{{'#/home'}}">
                     <span>01</span>
                 </a>
             </li>
-            <li class="icn_slider">
-                <a href="">
+            <li class="icn_slider" ng-class="{'active' : curPage == 'about-us'}">
+                <a ng-href="{{'#/about-us'}}">
                     <span>02</span>
                 </a>
             </li>
-            <li class="icn_slider">
-                <a href="">
+            <li class="icn_slider" ng-class="{'active' : curPage == 'more-about-us'}">
+                <a ng-href="{{'#/more-about-us'}}">
                     <span>03</span>
                 </a>
             </li>
