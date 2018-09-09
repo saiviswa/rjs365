@@ -1,0 +1,59 @@
+body {
+	background-image: url('../images/landing_page/background.jpg');
+}
+#main-content {
+	margin: 0 150px;
+	height: 80vh;
+}
+#desc-img-row {
+	display: inline-flex;
+	height: 70vh;
+}
+#desc-div {
+	z-index: 100;
+	position: absolute;
+}
+#desc-img {
+	z-index: 99;
+	left: 33.333333%;
+}
+.desc {
+	color: #FFFFFF;
+	font-family: Poppins;
+	font-size: 40px;
+	font-weight: 500;
+	line-height: 65px;
+}
+.sub-desc {
+	color: #FFFFFF;
+	font-family: "SF UI Text";
+	font-size: 13px;
+	line-height: 28px;
+}
+#desc-img img {
+	width: 100%;
+}
+#img-nav {
+	position: fixed;
+    right: 135px;
+    bottom: 64px;
+    z-index: 1000;
+}
+#img-nav img:first-child {
+	padding-right: 10px;
+}
+#scroll-div span::before {
+	top: 8px;
+    left: -80px;
+    width: 60px;
+    height: 2px;
+    object-fit: contain;
+    border-radius: 1px;
+    background-color: #ffffff;
+    content: '';
+    position: absolute;
+}
+#scroll-div {
+	position: relative;
+	color: #ffffff;
+}

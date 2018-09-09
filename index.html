@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="rjsmApp">
+    <head>
+        <title>rjs365</title>
+        <!--CSS Files-->
+        <link rel="stylesheet" type="text/css" href="assets/css/common.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-grid.min.css">
+        
+        <!-- Library JS Files -->
+        <script type="text/javascript" src="assets/js/lib/jquery-1.8.1.min.js"></script>
+        <script type="text/javascript" src="assets/js/lib/angular.js"></script>
+        <script type="text/javascript" src="assets/js/lib/angular-ui-route.js"></script>
+        <script type="text/javascript" src="assets/js/lib/angular-ui-router-styles.js"></script>
+        <script type="text/javascript" src="assets/slick/slick.min.js"></script>
+        
+        <!-- Angular config JS -->
+        <script type="text/javascript" src="assets/js/app.js"></script>
+        
+        <!-- Angular Directives -->
+        <script type="text/javascript" src="assets/js/directives/navBarHover.js"></script>
+        <script type="text/javascript" src="assets/js/directives/navBarContentHover.js"></script>
+        <script type="text/javascript" src="assets/js/directives/knowOurServicesClick.js"></script>
+        
+        <!-- Angular Modules -->
+        <script type="text/javascript" src="assets/js/carousel.js"></script>
+    </head>
+
+    <body>
+        <header data-ui-view="headerContent" id="header-content" class="col-12">
+
+        </header>
+        <ul id="slider-div">
+            <li class="icn_slider active">
+                <a href="">
+                    <span>01</span>
+                </a>
+            </li>
+            <li class="icn_slider">
+                <a href="">
+                    <span>02</span>
+                </a>
+            </li>
+            <li class="icn_slider">
+                <a href="">
+                    <span>03</span>
+                </a>
+            </li>
+            <li class="icn_slider">
+                <a href="">
+                    <span>04</span>
+                </a>
+            </li>
+        </ul>
+        <div data-ui-view="mainContent" id="main-content">
+
+        </div>
+        <div data-ui-view="footerContent" id="footer-content">
+            
+        </div>
+    </body>
+</html>
