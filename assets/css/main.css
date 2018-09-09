@@ -34,7 +34,7 @@ body {
 	width: 100%;
 }
 #img-nav {
-	position: fixed;
+	position: absolute;
     right: 135px;
     bottom: 64px;
     z-index: 1000;
