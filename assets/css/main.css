@@ -19,14 +19,14 @@ body {
 }
 .desc {
 	color: #FFFFFF;
-	font-family: Poppins;
+	font-family: PoppinsMedium;
 	font-size: 40px;
 	font-weight: 500;
 	line-height: 65px;
 }
 .sub-desc {
 	color: #FFFFFF;
-	font-family: "SF UI Text";
+	font-family: SFUITextRegular;
 	font-size: 13px;
 	line-height: 28px;
 }
@@ -43,7 +43,7 @@ body {
 	padding-right: 10px;
 }
 #scroll-div span::before {
-	top: 8px;
+	top: 13px;
     left: -80px;
     width: 60px;
     height: 2px;
@@ -56,9 +56,10 @@ body {
 #scroll-div {
 	position: relative;
 	color: #ffffff;
+	font-family: PoppinsRegular;
 }
 #desc-div .title {
-	font-family: SFUIText;
+	font-family: SFUITextBold;
 	font-size: 14px;
 	font-weight: bold;
 	font-style: normal;
@@ -78,4 +79,111 @@ body {
 }
 #desc-div p {
 	margin: 0 0 20px 0; 
+}
+#what-we-offer {
+	font-family: SFUITextBold;
+	font-size: 14px;
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 1px;
+	color: #e82946;
+	position: relative;
+}
+#what-we-offer span::after {
+	width: 51.1px;
+	left: 150px;
+	border: solid 1px #e82946;
+	content: '';
+	position: absolute;
+	top: 8px;
+}
+#our-services {
+  font-family: PoppinsMedium;
+  font-size: 40px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+.each-service {
+	padding: 20px;
+	position: relative;
+	height: 280px;
+}
+.service-title {
+	font-family: PoppinsLight;
+	font-size: 20px;
+	font-weight: 300;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #ffffff;
+	position: relative;
+	margin-bottom: 20px;
+}
+.service-desc {
+	font-family: SFUITextRegular;
+	font-size: 12px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 2;
+	letter-spacing: normal;
+	color: #ffffff;
+	position: relative;
+}
+.service-title span.num {
+	opacity: 0.1;
+	font-family: PoppinsRegular;
+	font-size: 51px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #e82946;
+	padding: 0 5px;
+	position: relative;
+}
+.service-title span.dash {
+	width: 51.1px;
+	border: solid 1px #ffffff;
+	content: '';
+	position: absolute;
+	top: 36px;
+	left: 0;
+	opacity: 1;
+}
+.service-title span.title-txt {
+	position: absolute;
+	top: 21px;
+	padding-left: 10px;
+}
+.explore-services {
+	display: none;
+	font-family: SFUITextBold;
+	font-size: 12px;
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 1.9px;
+	margin-top: 30px;
+	position: relative;
+}
+.explore-services a {
+	color: #e82946 !Important;
+}
+.explore-services a::after {
+	padding-left: 30px;
+	position: absolute;
+	content: url('../images/services/icn-arrow-right.svg');
+}
+.each-service.active > .explore-services {
+	display: block;
 }

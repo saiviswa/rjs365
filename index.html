@@ -17,9 +17,7 @@
         <script type="text/javascript" src="assets/js/app.js"></script>
         
         <!-- Angular Directives -->
-        <script type="text/javascript" src="assets/js/directives/navBarHover.js"></script>
-        <script type="text/javascript" src="assets/js/directives/navBarContentHover.js"></script>
-        <script type="text/javascript" src="assets/js/directives/knowOurServicesClick.js"></script>
+        <script type="text/javascript" src="assets/js/directives/serviceHover.js"></script>
         
         <!-- Angular Modules -->
         <script type="text/javascript" src="assets/js/carousel.js"></script>
@@ -45,8 +43,8 @@
                     <span>03</span>
                 </a>
             </li>
-            <li class="icn_slider">
-                <a href="">
+            <li class="icn_slider" ng-class="{'active' : curPage == 'services'}">
+                <a ng-href="{{'#/services'}}">
                     <span>04</span>
                 </a>
             </li>

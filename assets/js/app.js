@@ -45,6 +45,20 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider',
                 data: {
                     css: 'assets/css/main.css'
                 }
+            })
+            .state('services', {
+                url: "/services",
+                views: {
+                    "headerContent": {
+                        templateUrl: "views/layout/header.html"
+                    },
+                    "mainContent": {
+                        templateUrl: "views/partial/services.html"
+                    }
+                },
+                data: {
+                    css: 'assets/css/main.css'
+                }
             });
         $urlRouterProvider.otherwise("home");
     }

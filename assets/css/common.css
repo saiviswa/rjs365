@@ -1,6 +1,26 @@
 body {
 	margin: 0;
 }
+@font-face {
+    font-family: PoppinsRegular;
+    src: url('../fonts/Poppins/Poppins-Regular.otf');
+}
+@font-face {
+    font-family: PoppinsMedium;
+    src: url('../fonts/Poppins/Poppins-Medium.otf');
+}
+@font-face {
+    font-family: PoppinsLight;
+    src: url('../fonts/Poppins/Poppins-Light.otf');
+}
+@font-face {
+    font-family: SFUITextRegular;
+    src: url('../fonts/SFUIText/SFUIText-Regular.ttf');
+}
+@font-face {
+    font-family: SFUITextBold;
+    src: url('../fonts/SFUIText/SFUIText-Bold.ttf');
+}
 #header-content {
 	height: 20vh;
 	padding: 0 30px;
@@ -15,7 +35,7 @@ li {
 	list-style-type: none;
 }
 .header-title {
-	font-family: Poppins;
+	font-family: PoppinsRegular;
 	font-size: 18px;
 	font-weight: bold;
 	letter-spacing: 0.9px;
@@ -74,7 +94,7 @@ li {
 #slider-div li.icn_slider a {
 	width: 100%;
   	height: 10px;
-	font-family: Poppins;
+	font-family: PoppinsRegular;
 	font-size: 12px;
 	font-weight: normal;
 	font-style: normal;
