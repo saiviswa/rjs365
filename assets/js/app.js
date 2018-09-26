@@ -1,8 +1,8 @@
 var rjsmApp = angular.module('rjsmApp', ['uiRouterStyles']);
 
 //Route Definition
-rjsmApp.config(['$stateProvider', '$urlRouterProvider',
-    function($stateProvider, $urlRouterProvider) {
+rjsmApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
+    function($stateProvider, $urlRouterProvider, $locationProvider) {
         $stateProvider
             .state('home', {
                 url: "/home",
@@ -25,7 +25,7 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider',
                         templateUrl: "views/layout/header.html"
                     },
                     "mainContent": {
-                        templateUrl: "views/partial/about-us.html"
+                        templateUrl: "views/partial/landing.html"
                     }
                 },
                 data: {
@@ -63,13 +63,21 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider',
         $urlRouterProvider.otherwise("home");
     }
 
-]).run(['$state', '$rootScope',
-    function($state, $rootScope) {
+]).run(['$state', '$rootScope', '$anchorScroll', '$location', '$anchorScroll',
+    function($state, $rootScope, $anchorScroll, $location, $anchorScroll) {
         $rootScope.$on('$stateChangeStart', 
             function(event, toState, fromState) {
                 $rootScope.fromState = fromState;
                 $rootScope.toState = toState;
                 $rootScope.curPage = toState.name;
+                // $location.hash(toState.name);
+                // if (toState.name != "home") {
+                //     $anchorScroll(toState.name);
+                // } else {
+                //     $anchorScroll();
+                // }
+                $anchorScroll($location.hash());
+                $anchorScroll.yOffset = 130;
             }
         );
     }
