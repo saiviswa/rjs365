@@ -3,7 +3,6 @@ body {
 }
 #main-content {
 	margin: 0 150px;
-	height: 80vh;
 }
 #desc-img-row {
 	display: inline-flex;
@@ -112,7 +111,6 @@ body {
 .each-service {
 	padding: 20px;
 	position: relative;
-	height: 280px;
 }
 .service-title {
 	font-family: PoppinsLight;
@@ -165,7 +163,7 @@ body {
 	padding-left: 10px;
 }
 .explore-services {
-	display: none;
+	visibility: hidden;
 	font-family: SFUITextBold;
 	font-size: 12px;
 	font-weight: bold;
@@ -185,5 +183,5 @@ body {
 	content: url('../images/services/icn-arrow-right.svg');
 }
 .each-service.active > .explore-services {
-	display: block;
+	visibility: visible;
 }

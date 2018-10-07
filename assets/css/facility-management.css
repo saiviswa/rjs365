@@ -1,0 +1,65 @@
+body {
+	background-image: linear-gradient(to left, #000000, #000000) !important;
+}
+#slider-div {
+	display: none !important;
+}
+#facility-mgmt-div #desc-img-row {
+	margin-bottom: 60px;
+}
+.each-service .service-img {
+	margin-bottom: 20px;
+}
+.each-service .service-img img {
+	width: 100%;
+}
+#facility-mgmt-div {
+	margin-bottom: 60px;
+}
+.pagination-div {
+	background-color: #fff;
+	height: 200px;
+	display: block;
+	position: relative;
+}
+.pagination > span {
+	font-family: PoppinsMedium;
+	font-size: 29px;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	text-align: center;
+	color: #e82946;
+	display: block;
+}
+.pagination > span > span {
+	font-weight: 900;
+}
+.pagination > span::before {
+	width: 50px;
+	border: solid 2px #e82946;
+	content: '';
+	position: absolute;
+	top: 20px;
+	margin-left: -100px;
+}
+.pagination > span::after {
+	content: url('../images/ic-arrow-right-red.svg');
+	top: 4px;
+	position: absolute;
+	padding-left: 50px;
+}
+#right-line, #left-line {
+	position: absolute;
+	border: solid 5px #e82946;
+	width: 30%;
+}
+#right-line {
+	right: 0;
+	top: -5px;
+}
+#left-line {
+	left: 0;
+	top: 195px;
+}
