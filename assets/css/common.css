@@ -64,6 +64,8 @@ li {
 }
 #hamburger-menu-div {
 	justify-content: flex-end;
+	cursor: pointer;
+	padding-right: 30px;
 }
 .hamburger-menu-ico {
 	height: 22px;	
@@ -186,10 +188,6 @@ ul {
 	font-family: PoppinsLight;
 	font-size: 20px;
 	font-weight: 300;
-	font-style: normal;
-	font-stretch: normal;
-	line-height: normal;
-	letter-spacing: normal;
 	text-align: left;
 	color: #ffffff;
 }
@@ -198,4 +196,58 @@ ul {
 }
 #footer .row > div {
 	padding: 0 20px;
+}
+#header-menu {
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 1001;
+	height: 100vh;
+	background-color: #111214;
+ 	box-shadow: -94px 0 81px 0 rgba(0, 0, 12, 0.33);
+ 	width: 30%;
+ 	padding-right: 60px;
+ 	display: none;
+}
+#header-menu .menu li:first-child {
+	padding-top: 40px;
+	padding-bottom: 60px;
+}
+#header-menu .menu li {
+	position: relative;
+	font-family: PoppinsMedium;
+	font-size: 20px;
+	font-weight: 500;
+	text-align: right;
+	margin-bottom: 20px;
+	height: 30px;
+	cursor: pointer;
+}
+#header-menu .bottom-menu {
+	position: absolute;
+    bottom: 40px;
+    right: 60px;
+}
+#header-menu .bottom-menu li {
+	position: relative;
+	font-family: PoppinsRegular;
+	font-size: 16px;
+	text-align: right;
+	margin-bottom: 20px;
+	height: 30px;
+	cursor: pointer;
+}
+#header-menu li a {
+	color: #ffffff;
+}
+#header-menu li.active a {
+	color: #e82946;
+}
+#header-menu li.active::after {
+	position: absolute;
+	top: 35px;
+	margin-left: -20px;
+	width: 20px;
+	border: solid 1px #e82946;
+	content: '';
 }

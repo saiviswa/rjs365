@@ -45,7 +45,7 @@ body {
 	margin-left: -100px;
 }
 .pagination > span::after {
-	content: url('../images/ic-arrow-right-red.svg');
+	content: url('../images/icn-arrow-right-red.svg');
 	top: 4px;
 	position: absolute;
 	padding-left: 50px;

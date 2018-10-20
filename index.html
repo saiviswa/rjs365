@@ -17,16 +17,51 @@
         <script type="text/javascript" src="assets/js/app.js"></script>
         
         <!-- Angular Directives -->
+        <script type="text/javascript" src="assets/js/directives/headerMenu.js"></script>
         <script type="text/javascript" src="assets/js/directives/serviceHover.js"></script>
         
         <!-- Angular Modules -->
         <script type="text/javascript" src="assets/js/carousel.js"></script>
     </head>
 
-    <body>
+    <body header-menu>
         <header data-ui-view="headerContent" id="header-content" class="col-12">
 
         </header>
+        <div id="header-menu">
+            <ul class="menu">
+                <li><img src="assets/images/" header-menu/></li>
+                <li class="item">
+                    <a ng-href="">UI / UX Design</a>
+                </li>
+                <li class="item">
+                    <a ng-href="">Software development</a>
+                </li>
+                <li class="item" ng-class="{'active' : curPage == 'facility-management'}">
+                    <a ng-href="{{'#/facility-management'}}">Facility Management</a>
+                </li>
+                <li class="item">
+                    <a ng-href="">IT Solutions</a>
+                </li>
+                <li class="item">
+                    <a ng-href="">Real Estate</a>
+                </li>
+                <li class="item" ng-class="{'active' : curPage == 'services'}">
+                    <a ng-href="{{'#/services'}}">Services</a>
+                </li>
+            </ul>
+            <ul class="bottom-menu">
+                <li class="item">
+                    <a ng-href="">About</a>
+                </li>
+                <li class="item">
+                    <a ng-href="">Clients</a>
+                </li>
+                <li class="item">
+                    <a ng-href="">Contact Us</a>
+                </li>
+            </ul>
+        </div>
         <ul id="slider-div">
             <li class="icn_slider" ng-class="{'active' : curPage == 'home'}">
                 <a ng-href="{{'#/home'}}">
