@@ -46,6 +46,23 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
                     css: 'assets/css/main.css'
                 }
             })
+            .state('facility-management', {
+                url: "/facility-management",
+                views: {
+                    "headerContent": {
+                        templateUrl: "views/layout/header.html"
+                    },
+                    "mainContent": {
+                        templateUrl: "views/partial/facility-management.html"
+                    },
+                    "footerContent": {
+                        templateUrl: "views/layout/footer.html"
+                    }
+                },
+                data: {
+                    css: ['assets/css/main.css', 'assets/css/facility-management.css']
+                }
+            })
             .state('services', {
                 url: "/services",
                 views: {
