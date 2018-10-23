@@ -4,6 +4,9 @@ body {
 #main-content {
 	margin: 0 150px;
 }
+#main-content .home-content {
+	padding-top: 20vh;
+}
 #desc-img-row {
 	display: inline-flex;
 	height: 70vh;

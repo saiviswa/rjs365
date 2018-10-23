@@ -19,6 +19,7 @@
         <!-- Angular Directives -->
         <script type="text/javascript" src="assets/js/directives/headerMenu.js"></script>
         <script type="text/javascript" src="assets/js/directives/serviceHover.js"></script>
+        <script type="text/javascript" src="assets/js/directives/sliderClick.js"></script>
         
         <!-- Angular Modules -->
         <script type="text/javascript" src="assets/js/carousel.js"></script>
@@ -63,23 +64,23 @@
             </ul>
         </div>
         <ul id="slider-div">
-            <li class="icn_slider" ng-class="{'active' : curPage == 'home'}">
-                <a ng-href="{{'#/home'}}">
+            <li class="icn_slider home" ng-class="{'active' : curPage == 'home'}">
+                <a ng-href="{{'#/home'}}" slider-click>
                     <span>01</span>
                 </a>
             </li>
-            <li class="icn_slider" ng-class="{'active' : curPage == 'about-us'}">
-                <a ng-href="{{'#/home#about-us'}}">
+            <li class="icn_slider about-us" ng-class="{'active' : curPage == 'about-us'}">
+                <a ng-href="{{'#/home#about-us'}}" slider-click>
                     <span>02</span>
                 </a>
             </li>
-            <li class="icn_slider" ng-class="{'active' : curPage == 'more-about-us'}">
-                <a ng-href="{{'#/home#more-about-us'}}">
+            <li class="icn_slider more-about-us" ng-class="{'active' : curPage == 'more-about-us'}">
+                <a ng-href="{{'#/home#more-about-us'}}" slider-click>
                     <span>03</span>
                 </a>
             </li>
-            <li class="icn_slider" ng-class="{'active' : curPage == 'services'}">
-                <a ng-href="{{'#/home#services'}}">
+            <li class="icn_slider services" ng-class="{'active' : curPage == 'services'}">
+                <a ng-href="{{'#/home#services'}}" slider-click>
                     <span>04</span>
                 </a>
             </li>

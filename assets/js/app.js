@@ -70,7 +70,7 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
                         templateUrl: "views/layout/header.html"
                     },
                     "mainContent": {
-                        templateUrl: "views/partial/services.html"
+                        templateUrl: "views/partial/landing.html"
                     }
                 },
                 data: {
@@ -87,15 +87,29 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
                 $rootScope.fromState = fromState;
                 $rootScope.toState = toState;
                 $rootScope.curPage = toState.name;
-                // $location.hash(toState.name);
-                // if (toState.name != "home") {
-                //     $anchorScroll(toState.name);
-                // } else {
-                //     $anchorScroll();
-                // }
                 $anchorScroll($location.hash());
-                $anchorScroll.yOffset = 130;
+                $anchorScroll.yOffset = 0;          
             }
         );
+        $rootScope.$on('$locationChangeSuccess', function(event, newState, oldState) {
+            $rootScope.hash = $location.hash();
+            $('#slider-div').find('.icn_slider.active').removeClass('active');
+            if ($rootScope.hash == '') {
+                $('.icn_slider.home').addClass('active');
+            } else {
+                $('.icn_slider.'+$rootScope.hash).addClass('active');
+            }
+        });
     }
 ]);
+
+function vhtopx(value) {
+    var w = window,
+      d = document,
+      e = d.documentElement,
+      g = d.getElementsByTagName('body')[0],
+      x = w.innerWidth || e.clientWidth || g.clientWidth,
+      y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+
+    return (y*value)/100;
+}
