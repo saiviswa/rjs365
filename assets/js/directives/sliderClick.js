@@ -7,11 +7,15 @@ rjsmApp.directive('sliderClick', [function() {
                     event.preventDefault();
                     var len = this.hash.split('#').length;
                     if (len > 0 && this.hash.split('#')[len-1] != '') {
-                        var hash = '#' + this.hash.split('#')[len-1];
+                        var curHash = this.hash;
+                        var hash = '#' + curHash.split('#')[len-1];
                         $('html, body').animate({
                             scrollTop: $(hash).offset().top
                         }, 800, function() {
                             window.location.hash = hash;
+                            if (hash !== '#home') {
+                                history.replaceState(undefined, undefined, curHash);
+                            }
                         });
                     }
                 }

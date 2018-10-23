@@ -7,15 +7,15 @@ body {
 #main-content .home-content {
 	padding-top: 20vh;
 }
-#desc-img-row {
+.desc-img-row {
 	display: inline-flex;
 	height: 70vh;
 }
-#desc-div {
+.desc-div {
 	z-index: 100;
 	position: absolute;
 }
-#desc-img {
+.desc-img {
 	z-index: 99;
 	left: 33.333333%;
 }
@@ -32,7 +32,7 @@ body {
 	font-size: 13px;
 	line-height: 28px;
 }
-#desc-img img {
+.desc-img img {
 	width: 100%;
 }
 #img-nav {
@@ -56,11 +56,11 @@ body {
     position: absolute;
 }
 #scroll-div {
-	position: relative;
+	position: fixed;
 	color: #ffffff;
 	font-family: PoppinsRegular;
 }
-#desc-div .title {
+.desc-div .title {
 	font-family: SFUITextBold;
 	font-size: 14px;
 	font-weight: bold;
@@ -70,7 +70,7 @@ body {
 	letter-spacing: 1px;
 	color: #e82946;
 }
-#desc-div p.title::after {
+.desc-div p.title::after {
 	width: 52px;
 	height: 1px;
 	border: solid 1px #e82946;
@@ -79,7 +79,7 @@ body {
     top: 7px;
     margin-left: 20px;
 }
-#desc-div p {
+.desc-div p {
 	margin: 0 0 20px 0; 
 }
 #what-we-offer {

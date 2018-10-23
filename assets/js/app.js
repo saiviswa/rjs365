@@ -18,34 +18,6 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
                     css: 'assets/css/main.css'
                 }
             })
-            .state('about-us', {
-                url: "/about-us",
-                views: {
-                    "headerContent": {
-                        templateUrl: "views/layout/header.html"
-                    },
-                    "mainContent": {
-                        templateUrl: "views/partial/landing.html"
-                    }
-                },
-                data: {
-                    css: 'assets/css/main.css'
-                }
-            })
-            .state('more-about-us', {
-                url: "/more-about-us",
-                views: {
-                    "headerContent": {
-                        templateUrl: "views/layout/header.html"
-                    },
-                    "mainContent": {
-                        templateUrl: "views/partial/about-us-more.html"
-                    }
-                },
-                data: {
-                    css: 'assets/css/main.css'
-                }
-            })
             .state('facility-management', {
                 url: "/facility-management",
                 views: {
@@ -62,20 +34,6 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
                 data: {
                     css: ['assets/css/main.css', 'assets/css/facility-management.css']
                 }
-            })
-            .state('services', {
-                url: "/services",
-                views: {
-                    "headerContent": {
-                        templateUrl: "views/layout/header.html"
-                    },
-                    "mainContent": {
-                        templateUrl: "views/partial/landing.html"
-                    }
-                },
-                data: {
-                    css: 'assets/css/main.css'
-                }
             });
         $urlRouterProvider.otherwise("home");
     }
@@ -86,9 +44,7 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
             function(event, toState, fromState) {
                 $rootScope.fromState = fromState;
                 $rootScope.toState = toState;
-                $rootScope.curPage = toState.name;
-                $anchorScroll($location.hash());
-                $anchorScroll.yOffset = 0;          
+                $rootScope.curPage = toState.name;  
             }
         );
         $rootScope.$on('$locationChangeSuccess', function(event, newState, oldState) {
@@ -103,13 +59,22 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
     }
 ]);
 
-function vhtopx(value) {
-    var w = window,
-      d = document,
-      e = d.documentElement,
-      g = d.getElementsByTagName('body')[0],
-      x = w.innerWidth || e.clientWidth || g.clientWidth,
-      y = w.innerHeight|| e.clientHeight|| g.clientHeight;
+$(window).on('scroll', function() {
+    $('#scroll-div').hide();
+    // $('.home-content').each(function() {
+    //     if ($(this).offset().top < window.pageYOffset + 10 
+    //         && $(this).offset().top + $(this).height() > window.pageYOffset + 10) {
+    //         var hash = '#' + $(this).attr('id');
+    //         window.location.hash = hash;
+    //         history.replaceState(undefined, undefined, hash);
+    //     }
+    // });
+});
 
-    return (y*value)/100;
-}
+var isScrolling;
+window.addEventListener('scroll', function (event) {
+    window.clearTimeout(isScrolling);
+    isScrolling = setTimeout(function() {
+        $('#scroll-div').show();
+    }, 100);
+}, false);
