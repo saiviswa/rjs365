@@ -9,9 +9,6 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider',
                 views: {
                     "headerContent": {
                         templateUrl: "views/layout/header.html"
-                    },
-                    "mainContent": {
-                        // templateUrl: "views/partial/landing.html"
                     }
                 },
                 data: {
