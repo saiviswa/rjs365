@@ -19,10 +19,12 @@
         <!-- Angular Directives -->
         <script type="text/javascript" src="assets/js/directives/headerMenu.js"></script>
         <script type="text/javascript" src="assets/js/directives/serviceHover.js"></script>
-        <script type="text/javascript" src="assets/js/directives/sliderClick.js"></script>
         
         <!-- Angular Modules -->
         <script type="text/javascript" src="assets/js/carousel.js"></script>
+
+        <!-- fullPage JS -->
+        <script type="text/javascript" src="assets/js/fullpage/fullpage.js"></script>
     </head>
 
     <body header-menu>
@@ -65,28 +67,187 @@
         </div>
         <ul id="slider-div">
             <li class="icn_slider home" ng-class="{'active' : curPage == 'home' && hash == ''}">
-                <a ng-href="{{'#/home#home'}}" slider-click>
+                <a ng-href="{{'#/home'}}">
                     <span>01</span>
                 </a>
             </li>
             <li class="icn_slider about-us" ng-class="{'active' : curPage == 'about-us'}">
-                <a ng-href="{{'#/home#about-us'}}" slider-click>
+                <a ng-href="{{'#/home#about-us'}}">
                     <span>02</span>
                 </a>
             </li>
             <li class="icn_slider more-about-us" ng-class="{'active' : curPage == 'more-about-us'}">
-                <a ng-href="{{'#/home#more-about-us'}}" slider-click>
+                <a ng-href="{{'#/home#more-about-us'}}">
                     <span>03</span>
                 </a>
             </li>
             <li class="icn_slider services" ng-class="{'active' : curPage == 'services'}">
-                <a ng-href="{{'#/home#services'}}" slider-click>
+                <a ng-href="{{'#/home#services'}}">
                     <span>04</span>
                 </a>
             </li>
         </ul>
         <div data-ui-view="mainContent" id="main-content">
-
+            <div id="fullpage">
+                <div class="home-content">
+                    <div class="col-12 desc-img-row">
+                        <div class="col-5 desc-div">
+                            <p class="desc">
+                                rjs365 is your one stop solution for all your needs.
+                            </p>
+                            <p class="sub-desc">
+                                We offer wide range of services
+                            </p>
+                        </div>
+                        <div class="col-8 desc-img">
+                            <img src="assets/images/landing_page/img.jpg">
+                        </div>
+                    
+                    <div id="img-nav">
+                        <img src="assets/images/icn-chevron-left.svg"/>
+                        <img src="assets/images/icn-chevron-right.svg"/>
+                    </div>
+                    </div>
+                </div>
+                <div class="home-content">
+                    <div class="col-12 desc-img-row">
+                        <div class="col-6 desc-div">
+                            <p class="title">AN OVERVIEW</p>
+                            <p class="desc">
+                                We will help you with what we have learnt
+                            </p>
+                            <p class="sub-desc">
+                                To take over everything, from an idea and solutions to realization. We believe in traditions and incorporate them within our innovations for helping out the one in need with our wide range of services offered. We RJS 365 are a highly renowned Facility Management solutions and IT solutions provider having a wide number of prospective clients. RJS 365 Unites a diverse, dynamic, motivated team able to deliver a highly professional yet affordable services at all times.
+                            </p>
+                        </div>
+                        <div class="col-8 desc-img">
+                            <img src="assets/images/about_us/img-about-us.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="home-content">
+                    <div class="col-12 desc-img-row">
+                        <div class="col-6 desc-div">
+                            <p class="title">WE ARE FRIENDLY</p>
+                            <p class="desc">
+                                How we engage customers
+                            </p>
+                            <p class="sub-desc">
+                                We are a bunch of experts holding years and years of experience in services and solutions. Our team is highly knowledgeable and functional to meet any kind of business needs as and when needed. RJS 365 can work in a tight turnaround time and can yet deliver un-compromised quality services. Finest solutions at a competitive rate are what that makes us fit our client’s budget and needs. We believe in overcoming challenges through our specialised values and teamwork spirit.
+                            </p>
+                        </div>
+                        <div class="col-8 desc-img">
+                            <img src="assets/images/about_us_more/img-more-about.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="home-content">
+                    <div id="services-div">
+                        <div id="what-we-offer">
+                            <span>WHAT WE OFFER</span>
+                        </div>
+                        <div id="our-services">
+                            Our services
+                        </div>
+                        <div id="all-services" class="container">
+                            <div class="row">
+                                <div class="col-lg-4 col-6 each-service" service-hover>
+                                    <div class="service-title">
+                                        <span class="num">01</span>
+                                        <span class="dash"></span>
+                                        <span class="title-txt">Software Development</span>
+                                    </div>
+                                    <div class="service-desc">
+                                        <p>
+                                            Etiam pulvinar purus dolor, at interdum libero dignissim non. Phasellus bibendum cursus suscipit. Nunc tempus, nisl quis consectetur mollis, neque orci rhoncus dui, eu maximus augue lacus ac augue.
+                                        </p>
+                                    </div>
+                                    <div class="explore-services">
+                                        <a href="">EXPLORE SERVICES</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-6 each-service" service-hover>
+                                    <div class="service-title">
+                                        <span class="num">02</span>
+                                        <span class="dash"></span>
+                                        <span class="title-txt">Facility Management</span>
+                                    </div>
+                                    <div class="service-desc">
+                                        <p>
+                                            Etiam pulvinar purus dolor, at interdum libero dignissim non. Phasellus bibendum cursus suscipit. Nunc tempus, nisl quis consectetur mollis, neque orci rhoncus dui, eu maximus augue lacus ac augue.
+                                        </p>
+                                    </div>
+                                    <div class="explore-services">
+                                        <a href="">EXPLORE SERVICES</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-6 each-service" service-hover>
+                                    <div class="service-title">
+                                        <span class="num">03</span><span class="dash"></span>
+                                        <span class="title-txt">IT Solutions</span>
+                                    </div>
+                                    <div class="service-desc">
+                                        <p>
+                                            Etiam pulvinar purus dolor, at interdum libero dignissim non. Phasellus bibendum cursus suscipit. Nunc tempus, nisl quis consectetur mollis, neque orci rhoncus dui, eu maximus augue lacus ac augue.
+                                        </p>
+                                    </div>
+                                    <div class="explore-services">
+                                        <a href="">EXPLORE SERVICES</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-6 each-service" service-hover>
+                                    <div class="service-title">
+                                        <span class="num">04</span>
+                                        <span class="dash"></span>
+                                        <span class="title-txt">Real Estate</span>
+                                    </div>
+                                    <div class="service-desc">
+                                        <p>
+                                            Etiam pulvinar purus dolor, at interdum libero dignissim non. Phasellus bibendum cursus suscipit. Nunc tempus, nisl quis consectetur mollis, neque orci rhoncus dui, eu maximus augue lacus ac augue.
+                                        </p>
+                                    </div>
+                                    <div class="explore-services">
+                                        <a href="">EXPLORE SERVICES</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-6 each-service" service-hover>
+                                    <div class="service-title">
+                                        <span class="num">05</span>
+                                        <span class="dash"></span>
+                                        <span class="title-txt" class="title-txt">Branding and design</span>
+                                    </div>
+                                    <div class="service-desc">
+                                        <p>
+                                            Etiam pulvinar purus dolor, at interdum libero dignissim non. Phasellus bibendum cursus suscipit. Nunc tempus, nisl quis consectetur mollis, neque orci rhoncus dui, eu maximus augue lacus ac augue.
+                                        </p>
+                                    </div>
+                                    <div class="explore-services">
+                                        <a href="">EXPLORE SERVICES</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-6 each-service" service-hover>
+                                    <div class="service-title">
+                                        <span class="num">06</span>
+                                        <span class="dash"></span>
+                                        <span class="title-txt">Services</span>
+                                    </div>
+                                    <div class="service-desc">
+                                        <p>
+                                            Etiam pulvinar purus dolor, at interdum libero dignissim non. Phasellus bibendum cursus suscipit. Nunc tempus, nisl quis consectetur mollis, neque orci rhoncus dui, eu maximus augue lacus ac augue.
+                                        </p>
+                                    </div>
+                                    <div class="explore-services">
+                                        <a href="">EXPLORE SERVICES</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="scroll-div">
+                <span>Scroll</span>
+            </div>
         </div>
         <div class="pagination-div">
             <div id="right-line"></div>

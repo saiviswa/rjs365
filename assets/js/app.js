@@ -1,8 +1,8 @@
 var rjsmApp = angular.module('rjsmApp', ['uiRouterStyles']);
 
 //Route Definition
-rjsmApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
-    function($stateProvider, $urlRouterProvider, $locationProvider) {
+rjsmApp.config(['$stateProvider', '$urlRouterProvider',
+    function($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('home', {
                 url: "/home",
@@ -11,11 +11,11 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
                         templateUrl: "views/layout/header.html"
                     },
                     "mainContent": {
-                        templateUrl: "views/partial/landing.html"
+                        // templateUrl: "views/partial/landing.html"
                     }
                 },
                 data: {
-                    css: 'assets/css/main.css'
+                    css: ['assets/css/main.css', 'assets/css/fullpage.css']
                 }
             })
             .state('facility-management', {
@@ -38,13 +38,13 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
         $urlRouterProvider.otherwise("home");
     }
 
-]).run(['$state', '$rootScope', '$anchorScroll', '$location', '$anchorScroll',
-    function($state, $rootScope, $anchorScroll, $location, $anchorScroll) {
+]).run(['$state', '$rootScope', '$location',
+    function($state, $rootScope, $location) {
         $rootScope.$on('$stateChangeStart', 
-            function(event, toState, fromState) {
+            function(event, toState, toParams, fromState, fromParams) {
                 $rootScope.fromState = fromState;
                 $rootScope.toState = toState;
-                $rootScope.curPage = toState.name;  
+                $rootScope.curPage = toState.name;
             }
         );
         $rootScope.$on('$locationChangeSuccess', function(event, newState, oldState) {
@@ -56,25 +56,25 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
                 $('.icn_slider.'+$rootScope.hash).addClass('active');
             }
         });
+        $rootScope.$on('$viewContentLoaded', function(event) {
+            if (typeof $.fn.fullpage.destroy === 'function') {
+                $.fn.fullpage.destroy('all');
+            }
+            fullPageInit();
+        });
     }
 ]);
 
-$(window).on('scroll', function() {
-    $('#scroll-div').hide();
-    // $('.home-content').each(function() {
-    //     if ($(this).offset().top < window.pageYOffset + 10 
-    //         && $(this).offset().top + $(this).height() > window.pageYOffset + 10) {
-    //         var hash = '#' + $(this).attr('id');
-    //         window.location.hash = hash;
-    //         history.replaceState(undefined, undefined, hash);
-    //     }
-    // });
-});
-
-var isScrolling;
-window.addEventListener('scroll', function (event) {
-    window.clearTimeout(isScrolling);
-    isScrolling = setTimeout(function() {
-        $('#scroll-div').show();
-    }, 100);
-}, false);
+function fullPageInit() {
+    $('#fullpage').fullpage({
+        anchors: ["/home", "/home#about-us", "/home#more-about-us", "/home#services"],
+        sectionSelector: '.home-content',
+        scrollingSpeed: 1000,
+        onLeave: function(index, nextIndex, direction) {
+            $('#scroll-div').hide();
+        },
+        afterLoad: function(anchorLink, index) {
+            $('#scroll-div').show();
+        }
+    });
+}
