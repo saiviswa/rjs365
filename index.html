@@ -4,6 +4,7 @@
         <title>rjs365</title>
         <!--CSS Files-->
         <link rel="stylesheet" type="text/css" href="assets/css/common.css">
+        <link rel="stylesheet" type="text/css" href="assets/slick/slick.css">
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-grid.min.css">
         
         <!-- Library JS Files -->
@@ -19,9 +20,6 @@
         <!-- Angular Directives -->
         <script type="text/javascript" src="assets/js/directives/headerMenu.js"></script>
         <script type="text/javascript" src="assets/js/directives/serviceHover.js"></script>
-        
-        <!-- Angular Modules -->
-        <script type="text/javascript" src="assets/js/carousel.js"></script>
 
         <!-- fullPage JS -->
         <script type="text/javascript" src="assets/js/fullpage/fullpage.js"></script>
@@ -100,12 +98,22 @@
                             </p>
                         </div>
                         <div class="col-8 desc-img">
-                            <img src="assets/images/landing_page/img.jpg">
+                            <div class="slider">
+                                <div>
+                                    <img src="assets/images/landing_page/img.jpg"/>
+                                </div>
+                                <div>
+                                    <img src="assets/images/about_us/img-about-us.jpg"/>
+                                </div>
+                                <div>
+                                    <img src="assets/images/about_us_more/img-more-about.jpg"/>
+                                </div>
+                            </div>
                         </div>
                     
                     <div id="img-nav">
-                        <img src="assets/images/icn-chevron-left.svg"/>
-                        <img src="assets/images/icn-chevron-right.svg"/>
+                        <img class="left" src="assets/images/icn-chevron-left.svg"/>
+                        <img class="right" src="assets/images/icn-chevron-right.svg"/>
                     </div>
                     </div>
                 </div>

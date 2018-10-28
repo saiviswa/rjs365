@@ -57,7 +57,11 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider',
             if (typeof $.fn.fullpage.destroy === 'function') {
                 $.fn.fullpage.destroy('all');
             }
+            if ($('.slider').hasClass('slick-initialized')) {
+                $('.slider').slick('destroy');
+            } 
             fullPageInit();
+            slickInit();
         });
     }
 ]);
@@ -73,5 +77,15 @@ function fullPageInit() {
         afterLoad: function(anchorLink, index) {
             $('#scroll-div').show();
         }
+    });
+}
+
+function slickInit() {
+    $('.slider').slick({
+        speed: 1000,
+        arrows: true,
+        prevArrow: $('#img-nav .left'),
+        nextArrow: $('#img-nav .right,'),
+        useTransform: false
     });
 }

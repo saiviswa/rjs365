@@ -36,6 +36,7 @@ body {
     right: -27px;
     bottom: -27px;
     z-index: 1000;
+    cursor: pointer;
 }
 #img-nav img:first-child {
 	padding-right: 10px;
