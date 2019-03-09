@@ -1,0 +1,60 @@
+<div id="it-div">
+    <div class="col-12 desc-img-row">
+        <div class="col-6 desc-div">
+            <p class="title">NETWORK BIZZ</p>
+            <p class="desc">
+                We offer wide range of IT solutions
+            </p>
+            <p class="sub-desc">
+                We provide IT management services for Firewall, Network and Server Installations including maintenance and support. Fully qualified and certificated people work with us. We also provide L1, L2, L3 services, support, and design & implement networks. We work with small and medium sized companies. Company ability to work on different projects in term of Qualification and certifications of employees.
+            </p>
+        </div>
+        <div class="col-8 desc-img">
+            <img src="assets/images/it/it.jpg">
+        </div>
+    </div>
+    <div ng-controller='rjsmController'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-6 each-service" ng-repeat="facility in itFacilities" ng-if="!facility.secondPage">
+                    <div class="service-img">
+                        <img ng-src="{{facility.imgSrc}}">
+                    </div>
+                    <div class="service-title">
+                        <span class="num">{{facility.num}}</span>
+                        <span class="dash"></span>
+                        <span class="title-txt">{{facility.title}}</span>
+                    </div>
+                    <div class="service-desc">
+                        <p>
+                            {{facility.content}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ad-div">
+    <div id="right-line"></div>
+    <div class="ad">
+        <span>We also offer Free IT Consultation</span>
+    </div>
+    <div id="left-line"></div>
+</div>
+<div id="it-consultation">
+    <div class="row">
+        <div class="col-lg-6 col-6">
+            <p class="title">Meeting & Discussion</p>
+            <p class="desc">The first part of the process is where one of our Senior Engineers meets with you to discuss your business needs and IT requirements. It's important that we fully understand the history of the business as well as the targets and goals you are aiming for, alongside looking at your current IT setup.</p>
+        </div>
+        <div class="col-lg-6 col-6">
+            <p class="title">On-site Audit</p>
+            <p class="desc">Our team carries out a physical audit of your IT infrastructure. Our team are all fully qualified to check your IT system against current best practice for the industry, and can identify any emerging IT solutions which might help your business.</p>
+        </div>
+        <div class="col-lg-6 col-6">
+            <p class="title">Report & Analysis</p>
+            <p class="desc">Finally, we'll look over our findings to decide if the current IT infrastructure is fit for purpose. We'll check if it is operating effectively, keeping your data safe and achieving your business goals.</p>
+        </div>
+    </div>
+</div>

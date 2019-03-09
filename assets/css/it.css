@@ -1,0 +1,43 @@
+html, body {
+	overflow: auto !important;
+}
+body {
+	background-image: linear-gradient(to left, #000000, #000000) !important;
+}
+#it-div .desc-img-row {
+	margin-bottom: 60px;
+}
+.each-service .service-img {
+	margin-bottom: 20px;
+}
+.each-service .service-img img {
+	width: 100%;
+}
+#it-div {
+	margin-bottom: 60px;
+	padding-top: 20vh;
+	margin: 0 150px;
+}
+#it-div .service-title {
+	margin-bottom: 40px;
+}
+#it-consultation {
+	margin: 0 150px;
+}
+#it-consultation .title {
+	font-family: PoppinsMedium;
+	font-size: 40px;
+	font-weight: 500;
+	line-height: 1.63;
+	color: #ffffff;
+}
+#it-consultation .desc {
+	font-family: SFUITextRegular;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 2.15;
+	color: #ffffff;
+}
+#it-consultation .col-lg-6.col-6 {
+	padding: 20px 40px;
+}
