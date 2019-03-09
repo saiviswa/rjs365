@@ -1,0 +1,20 @@
+<div id="about-us-div" ng-controller="rjsmController">
+    <div class="single-page-section" ng-repeat="eachPage in aboutUs">
+        <div class="single-page-content">
+            <div class="col-12 desc-img-row">
+                <div class="col-6 desc-div">
+                    <p class="title">{{eachPage.title}}</p>
+                    <p class="desc">
+                        {{eachPage.desc}}
+                    </p>
+                    <p class="sub-desc">
+                        {{eachPage.subDesc}}
+                    </p>
+                </div>
+                <div class="col-8 desc-img">
+                    <img ng-src="{{eachPage.imgSrc}}">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

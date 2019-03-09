@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="rjsmApp">
     <head>
-        <title>rjs365</title>
+        <title>RJS 365</title>
         <!--CSS Files-->
         <link rel="stylesheet" type="text/css" href="assets/css/common.css">
         <link rel="stylesheet" type="text/css" href="assets/slick/slick.css">
@@ -33,10 +33,7 @@
             <ul class="menu">
                 <li><img src="assets/images/" header-menu/></li>
                 <li class="item">
-                    <a ng-href="">UI / UX Design</a>
-                </li>
-                <li class="item">
-                    <a ng-href="">Software Development</a>
+                    <a ng-href="">Design & Development</a>
                 </li>
                 <li class="item" ng-class="{'active' : curPage == 'facility-management'}">
                     <a ng-href="{{'#/facility-management'}}">Facility Management</a>
@@ -45,15 +42,15 @@
                     <a ng-href="">IT Solutions</a>
                 </li>
                 <li class="item">
-                    <a ng-href="">Real Estate</a>
+                    <a ng-href="{{'#/real-estate'}}">Real Estate</a>
                 </li>
-                <li class="item" ng-class="{'active' : curPage == 'services'}">
-                    <a ng-href="{{'#/home#services'}}">Services</a>
+                <li class="item">
+                    <a ng-href="">Other Services</a>
                 </li>
             </ul>
             <ul class="bottom-menu">
-                <li class="item">
-                    <a ng-href="">About</a>
+                <li class="item" ng-class="{'active' : curPage == 'about-us'}">
+                    <a ng-href="{{'#/about-us'}}">About</a>
                 </li>
                 <li class="item">
                     <a ng-href="">Clients</a>
@@ -63,38 +60,28 @@
                 </li>
             </ul>
         </div>
-        <ul id="slider-div">
+        <ul id="slider-div" ng-if="curPage == 'home'">
             <li class="icn_slider home" ng-class="{'active' : curPage == 'home' && hash == ''}">
                 <a ng-href="{{'#/home'}}">
                     <span>01</span>
                 </a>
             </li>
-            <li class="icn_slider about-us" ng-class="{'active' : curPage == 'about-us'}">
-                <a ng-href="{{'#/home#about-us'}}">
-                    <span>02</span>
-                </a>
-            </li>
-            <li class="icn_slider more-about-us" ng-class="{'active' : curPage == 'more-about-us'}">
-                <a ng-href="{{'#/home#more-about-us'}}">
-                    <span>03</span>
-                </a>
-            </li>
             <li class="icn_slider services" ng-class="{'active' : curPage == 'services'}">
                 <a ng-href="{{'#/home#services'}}">
-                    <span>04</span>
+                    <span>02</span>
                 </a>
             </li>
         </ul>
         <div data-ui-view="mainContent" id="main-content">
-            <div id="fullpage">
+            <div id="fullpage-home">
                 <div class="home-content">
                     <div class="col-12 desc-img-row">
                         <div class="col-5 desc-div">
                             <p class="desc">
-                                rjs365 is your one stop solution for all your needs.
+                                Your one stop solution for all your needs.
                             </p>
                             <p class="sub-desc">
-                                We offer wide range of services
+                                We offer wide range of services.
                             </p>
                         </div>
                         <div class="col-8 desc-img">
@@ -118,39 +105,7 @@
                     </div>
                 </div>
                 <div class="home-content">
-                    <div class="col-12 desc-img-row">
-                        <div class="col-6 desc-div">
-                            <p class="title">AN OVERVIEW</p>
-                            <p class="desc">
-                                We will help you with what we have learnt
-                            </p>
-                            <p class="sub-desc">
-                                To take over everything, from an idea and solutions to realization. We believe in traditions and incorporate them within our innovations for helping out the one in need with our wide range of services offered. We RJS 365 are a highly renowned Facility Management solutions and IT solutions provider having a wide number of prospective clients. RJS 365 Unites a diverse, dynamic, motivated team able to deliver a highly professional yet affordable services at all times.
-                            </p>
-                        </div>
-                        <div class="col-8 desc-img">
-                            <img src="assets/images/about_us/img-about-us.jpg">
-                        </div>
-                    </div>
-                </div>
-                <div class="home-content">
-                    <div class="col-12 desc-img-row">
-                        <div class="col-6 desc-div">
-                            <p class="title">WE ARE FRIENDLY</p>
-                            <p class="desc">
-                                How we engage customers
-                            </p>
-                            <p class="sub-desc">
-                                We are a bunch of experts holding years and years of experience in services and solutions. Our team is highly knowledgeable and functional to meet any kind of business needs as and when needed. RJS 365 can work in a tight turnaround time and can yet deliver un-compromised quality services. Finest solutions at a competitive rate are what that makes us fit our client’s budget and needs. We believe in overcoming challenges through our specialised values and teamwork spirit.
-                            </p>
-                        </div>
-                        <div class="col-8 desc-img">
-                            <img src="assets/images/about_us_more/img-more-about.jpg">
-                        </div>
-                    </div>
-                </div>
-                <div class="home-content">
-                    <div id="services-div">
+                    <div id="services-div" ng-controller='rjsmController'>
                         <div id="what-we-offer">
                             <span>WHAT WE OFFER</span>
                         </div>
@@ -159,93 +114,19 @@
                         </div>
                         <div id="all-services" class="container">
                             <div class="row">
-                                <div class="col-lg-4 col-6 each-service" service-hover>
+                                <div class="col-lg-4 col-6 each-service" service-hover ng-repeat="service in services">
                                     <div class="service-title">
-                                        <span class="num">01</span>
+                                        <span class="num">{{service.num}}</span>
                                         <span class="dash"></span>
-                                        <span class="title-txt">Software Development</span>
+                                        <span class="title-txt">{{service.title}}</span>
                                     </div>
                                     <div class="service-desc">
                                         <p>
-                                            Etiam pulvinar purus dolor, at interdum libero dignissim non. Phasellus bibendum cursus suscipit. Nunc tempus, nisl quis consectetur mollis, neque orci rhoncus dui, eu maximus augue lacus ac augue.
+                                            {{service.content}}
                                         </p>
                                     </div>
                                     <div class="explore-services">
-                                        <a href="">EXPLORE SERVICES</a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-6 each-service" service-hover>
-                                    <div class="service-title">
-                                        <span class="num">02</span>
-                                        <span class="dash"></span>
-                                        <span class="title-txt">Facility Management</span>
-                                    </div>
-                                    <div class="service-desc">
-                                        <p>
-                                            Etiam pulvinar purus dolor, at interdum libero dignissim non. Phasellus bibendum cursus suscipit. Nunc tempus, nisl quis consectetur mollis, neque orci rhoncus dui, eu maximus augue lacus ac augue.
-                                        </p>
-                                    </div>
-                                    <div class="explore-services">
-                                        <a href="">EXPLORE SERVICES</a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-6 each-service" service-hover>
-                                    <div class="service-title">
-                                        <span class="num">03</span><span class="dash"></span>
-                                        <span class="title-txt">IT Solutions</span>
-                                    </div>
-                                    <div class="service-desc">
-                                        <p>
-                                            Etiam pulvinar purus dolor, at interdum libero dignissim non. Phasellus bibendum cursus suscipit. Nunc tempus, nisl quis consectetur mollis, neque orci rhoncus dui, eu maximus augue lacus ac augue.
-                                        </p>
-                                    </div>
-                                    <div class="explore-services">
-                                        <a href="">EXPLORE SERVICES</a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-6 each-service" service-hover>
-                                    <div class="service-title">
-                                        <span class="num">04</span>
-                                        <span class="dash"></span>
-                                        <span class="title-txt">Real Estate</span>
-                                    </div>
-                                    <div class="service-desc">
-                                        <p>
-                                            Etiam pulvinar purus dolor, at interdum libero dignissim non. Phasellus bibendum cursus suscipit. Nunc tempus, nisl quis consectetur mollis, neque orci rhoncus dui, eu maximus augue lacus ac augue.
-                                        </p>
-                                    </div>
-                                    <div class="explore-services">
-                                        <a href="">EXPLORE SERVICES</a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-6 each-service" service-hover>
-                                    <div class="service-title">
-                                        <span class="num">05</span>
-                                        <span class="dash"></span>
-                                        <span class="title-txt" class="title-txt">Branding and design</span>
-                                    </div>
-                                    <div class="service-desc">
-                                        <p>
-                                            Etiam pulvinar purus dolor, at interdum libero dignissim non. Phasellus bibendum cursus suscipit. Nunc tempus, nisl quis consectetur mollis, neque orci rhoncus dui, eu maximus augue lacus ac augue.
-                                        </p>
-                                    </div>
-                                    <div class="explore-services">
-                                        <a href="">EXPLORE SERVICES</a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-6 each-service" service-hover>
-                                    <div class="service-title">
-                                        <span class="num">06</span>
-                                        <span class="dash"></span>
-                                        <span class="title-txt">Services</span>
-                                    </div>
-                                    <div class="service-desc">
-                                        <p>
-                                            Etiam pulvinar purus dolor, at interdum libero dignissim non. Phasellus bibendum cursus suscipit. Nunc tempus, nisl quis consectetur mollis, neque orci rhoncus dui, eu maximus augue lacus ac augue.
-                                        </p>
-                                    </div>
-                                    <div class="explore-services">
-                                        <a href="">EXPLORE SERVICES</a>
+                                        <a ng-href="{{service.link}}">EXPLORE SERVICES</a>
                                     </div>
                                 </div>
                             </div>
@@ -256,13 +137,6 @@
             <div id="scroll-div">
                 <span>Scroll</span>
             </div>
-        </div>
-        <div class="pagination-div">
-            <div id="right-line"></div>
-            <div class="pagination transform-xy-50">
-                <span ng-if="curPage == 'facility-management'">Next <span>IT Solutions</span></span>
-            </div>
-            <div id="left-line"></div>
         </div>
         <div data-ui-view="footerContent" id="footer-content">
             

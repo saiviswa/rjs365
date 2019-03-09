@@ -1,0 +1,51 @@
+body {
+ 	background-image: linear-gradient(to left, #000000, #000000) !important;
+}
+#real-estate-div {
+	margin: 0 150px;
+}
+.desc-div {
+	margin-top: 60px;
+}
+.ad-div {
+	background-color: #e82946;
+	padding: 60px 150px 40px;
+	position: relative;
+}
+.ad-div .title {
+	font-family: SFUITextBold;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: normal;
+	color: #ffffff;
+	margin: 0;
+	margin-bottom: 20px;
+	position: relative;
+}
+.ad-div .desc {
+	font-family: PoppinsMedium;
+	font-size: 40px;
+	font-weight: 500;
+	line-height: 1.63;
+	color: #ffffff;
+	margin: 0;
+	margin-bottom: 20px;
+}
+.ad-div .sub-desc {
+	width: 492px;
+	height: 39px;
+	font-family: SFUITextRegular;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 2.15;
+	color: #ffffff;
+}
+.ad-div p.title::after {
+    width: 52px;
+    height: 1px;
+    border: solid 1px #ffffff;
+    content: '';
+    position: absolute;
+    top: 7px;
+    margin-left: 20px;
+}

@@ -13,132 +13,57 @@
             <img src="assets/images/about_us_more/img-more-about.jpg">
         </div>
     </div>
-    <div id="facility-services-div">
-        <div id="facility-services" class="container">
+    <div ng-controller='rjsmController'>
+        <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-6 each-service" service-hover>
+                <div class="col-lg-4 col-6 each-service" ng-repeat="facility in facilities" ng-if="!facility.secondPage">
                     <div class="service-img">
-                        <img src="assets/images/facility_management/front_office.jpg">
+                        <img ng-src="{{facility.imgSrc}}">
                     </div>
                     <div class="service-title">
-                        <span class="num">01</span>
+                        <span class="num">{{facility.num}}</span>
                         <span class="dash"></span>
-                        <span class="title-txt">Front Office / Receptionist</span>
+                        <span class="title-txt">{{facility.title}}</span>
                     </div>
                     <div class="service-desc">
                         <p>
-                            Etiam pulvinar purus dolor, at interdum libero dignissim non. Phasellus bibendum cursus suscipit. Nunc tempus, nisl quis consectetur mollis, neque orci rhoncus dui, eu maximus augue lacus ac augue.
+                            {{facility.content}}
                         </p>
-                    </div>
-                    <div class="explore-services">
-                        <a href="">EXPLORE SERVICES</a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-6 each-service" service-hover>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ad-div">
+    <div id="right-line"></div>
+    <div class="ad">
+        <span>We also offer a wide range of Electro Mechanical Services</span>
+    </div>
+    <div id="left-line"></div>
+</div>
+<div class="ad-content-div">
+    <p>
+        As one of the fastest growing facility Management Company, we offer a wide range of Electro - Mechanical Services to handle the facilities within your premises. We take care of the Electrical & Mechanical maintenance (MEP Services) with our specialized, trained and qualified personnel to maintain and manage complete MEP services on 24 hour basis. Our Electro – Mechanical services includes:
+    </p>
+</div>
+<div id="facility-mgmt-div">
+    <div ng-controller='rjsmController'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-6 each-service" ng-repeat="facility in facilities" ng-if="facility.secondPage">
                     <div class="service-img">
-                        <img src="assets/images/facility_management/security.jpg">
+                        <img ng-src="{{facility.imgSrc}}">
                     </div>
                     <div class="service-title">
-                        <span class="num">02</span>
+                        <span class="num">{{facility.num}}</span>
                         <span class="dash"></span>
-                        <span class="title-txt">Security</span>
+                        <span class="title-txt">{{facility.title}}</span>
                     </div>
                     <div class="service-desc">
                         <p>
-                            We provide trained security guards to any business establishments, residential apartments, a person or a property.
+                            {{facility.content}}
                         </p>
-                    </div>
-                    <div class="explore-services">
-                        <a href="">EXPLORE SERVICES</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-6 each-service" service-hover>
-                    <div class="service-img">
-                        <img src="assets/images/facility_management/house-keeping.jpg">
-                    </div>
-                    <div class="service-title">
-                        <span class="num">03</span><span class="dash"></span>
-                        <span class="title-txt">Housekeeping</span>
-                    </div>
-                    <div class="service-desc">
-                        <p>
-                            Whether your space is administrative, executive or office floor plan, we drive to help you meet your requirements.
-                        </p>
-                    </div>
-                    <div class="explore-services">
-                        <a href="">EXPLORE SERVICES</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-6 each-service" service-hover>
-                    <div class="service-img">
-                        <img src="assets/images/facility_management/electricians.jpg">
-                    </div>
-                    <div class="service-title">
-                        <span class="num">04</span>
-                        <span class="dash"></span>
-                        <span class="title-txt">Electricians</span>
-                    </div>
-                    <div class="service-desc">
-                        <p>
-                            Etiam pulvinar purus dolor, at interdum libero dignissim non. Phasellus bibendum cursus suscipit. Nunc tempus, nisl quis consectetur mollis, neque orci rhoncus dui, eu maximus augue lacus ac augue.
-                        </p>
-                    </div>
-                    <div class="explore-services">
-                        <a href="">EXPLORE SERVICES</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-6 each-service" service-hover>
-                    <div class="service-img">
-                        <img src="assets/images/facility_management/ac.jpg">
-                    </div>
-                    <div class="service-title">
-                        <span class="num">05</span>
-                        <span class="dash"></span>
-                        <span class="title-txt" class="title-txt">AC Technicians</span>
-                    </div>
-                    <div class="service-desc">
-                        <p>
-                            Etiam pulvinar purus dolor, at interdum libero dignissim non. Phasellus bibendum cursus suscipit. Nunc tempus, nisl quis consectetur mollis, neque orci rhoncus dui, eu maximus augue lacus ac augue.
-                        </p>
-                    </div>
-                    <div class="explore-services">
-                        <a href="">EXPLORE SERVICES</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-6 each-service" service-hover>
-                    <div class="service-img">
-                        <img src="assets/images/facility_management/plumber.jpg">
-                    </div>
-                    <div class="service-title">
-                        <span class="num">06</span>
-                        <span class="dash"></span>
-                        <span class="title-txt">Plumber</span>
-                    </div>
-                    <div class="service-desc">
-                        <p>
-                            Etiam pulvinar purus dolor, at interdum libero dignissim non. Phasellus bibendum cursus suscipit. Nunc tempus, nisl quis consectetur mollis, neque orci rhoncus dui, eu maximus augue lacus ac augue.
-                        </p>
-                    </div>
-                    <div class="explore-services">
-                        <a href="">EXPLORE SERVICES</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-6 each-service" service-hover>
-                    <div class="service-img">
-                        <img src="assets/images/facility_management/mailroom.jpg">
-                    </div>
-                    <div class="service-title">
-                        <span class="num">07</span>
-                        <span class="dash"></span>
-                        <span class="title-txt">Mail Room</span>
-                    </div>
-                    <div class="service-desc">
-                        <p>
-                            Our core business revolves around running on-site service centres with mail and logistics, generally providing the hub for service delivery options.
-                        </p>
-                    </div>
-                    <div class="explore-services">
-                        <a href="">EXPLORE SERVICES</a>
                     </div>
                 </div>
             </div>

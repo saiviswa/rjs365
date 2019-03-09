@@ -4,9 +4,6 @@ html, body {
 body {
 	background-image: linear-gradient(to left, #000000, #000000) !important;
 }
-#slider-div {
-	display: none !important;
-}
 #facility-mgmt-div .desc-img-row {
 	margin-bottom: 60px;
 }
@@ -19,14 +16,18 @@ body {
 #facility-mgmt-div {
 	margin-bottom: 60px;
 	padding-top: 20vh;
+	margin: 0 150px;
 }
-.pagination-div {
+.ad-div {
 	background-color: #fff;
 	height: 200px;
 	display: block;
 	position: relative;
 }
-.pagination > span {
+.ad {
+	padding: 80px 0;
+}
+.ad > span {
 	font-family: PoppinsMedium;
 	font-size: 29px;
 	font-style: normal;
@@ -37,22 +38,8 @@ body {
 	color: #e82946;
 	display: block;
 }
-.pagination > span > span {
+.ad > span > span {
 	font-weight: 900;
-}
-.pagination > span::before {
-	width: 50px;
-	border: solid 2px #e82946;
-	content: '';
-	position: absolute;
-	top: 20px;
-	margin-left: -100px;
-}
-.pagination > span::after {
-	content: url('../images/icn-arrow-right-red.svg');
-	top: 4px;
-	position: absolute;
-	padding-left: 50px;
 }
 #right-line, #left-line {
 	position: absolute;
@@ -66,4 +53,15 @@ body {
 #left-line {
 	left: 0;
 	top: 195px;
+}
+.ad-content-div {
+	font-family: SFUITextRegular;
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 2.1;
+	text-align: center;
+	color: #ffffff;
+}
+.ad-content-div p {
+	padding: 30px 10%
 }
