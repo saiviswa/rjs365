@@ -33,24 +33,24 @@ body {
 }
 #img-nav {
 	position: absolute;
-    right: -27px;
-    bottom: -27px;
-    z-index: 1000;
-    cursor: pointer;
+	right: -27px;
+	bottom: -27px;
+	z-index: 1000;
+	cursor: pointer;
 }
 #img-nav img:first-child {
 	padding-right: 10px;
 }
 #scroll-div span::before {
 	top: 13px;
-    left: -80px;
-    width: 60px;
-    height: 2px;
-    object-fit: contain;
-    border-radius: 1px;
-    background-color: #ffffff;
-    content: '';
-    position: absolute;
+	left: -80px;
+	width: 60px;
+	height: 2px;
+	object-fit: contain;
+	border-radius: 1px;
+	background-color: #ffffff;
+	content: '';
+	position: absolute;
 }
 #scroll-div {
 	position: fixed;
@@ -74,9 +74,9 @@ body {
 	height: 1px;
 	border: solid 1px #e82946;
 	content: '';
-    position: absolute;
-    top: 7px;
-    margin-left: 20px;
+	position: absolute;
+	top: 7px;
+	margin-left: 20px;
 }
 .desc-div p {
 	margin: 0 0 20px 0; 

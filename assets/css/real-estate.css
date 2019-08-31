@@ -4,15 +4,12 @@ body {
 #real-estate-div {
 	margin: 0 150px;
 }
-.desc-div {
-	margin-top: 60px;
-}
-.real-estate-ad-div {
+.real-estate-advt-div {
 	background-color: #e82946;
 	padding: 60px 150px 40px;
 	position: relative;
 }
-.real-estate-ad-div .title {
+.real-estate-advt-div .title {
 	font-family: SFUITextBold;
 	font-size: 14px;
 	font-weight: bold;
@@ -22,7 +19,7 @@ body {
 	margin-bottom: 20px;
 	position: relative;
 }
-.real-estate-ad-div .desc {
+.real-estate-advt-div .desc {
 	font-family: PoppinsMedium;
 	font-size: 40px;
 	font-weight: 500;
@@ -31,7 +28,7 @@ body {
 	margin: 0;
 	margin-bottom: 20px;
 }
-.real-estate-ad-div .sub-desc {
+.real-estate-advt-div .sub-desc {
 	width: 492px;
 	height: 39px;
 	font-family: SFUITextRegular;
@@ -40,7 +37,7 @@ body {
 	line-height: 2.15;
 	color: #ffffff;
 }
-.real-estate-ad-div p.title::after {
+.real-estate-advt-div p.title::after {
     width: 52px;
     height: 1px;
     border: solid 1px #ffffff;

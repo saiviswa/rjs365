@@ -85,6 +85,23 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider',
                 data: {
                     css: ['assets/css/about-us.css', 'assets/css/main.css']
                 }
+            })
+            .state('clients', {
+                url: "/our-clients",
+                views: {
+                    "headerContent": {
+                        templateUrl: "views/layout/header.html"
+                    },
+                    "mainContent": {
+                        templateUrl: "views/partial/clients.html"
+                    },
+                    "footerContent": {
+                        templateUrl: "views/layout/footer.html"
+                    }
+                },
+                data: {
+                    css: ['assets/css/about-us.css', 'assets/css/main.css']
+                }
             });
         $urlRouterProvider.otherwise("home");
     }
@@ -99,12 +116,9 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider',
         );
         $rootScope.$on('$locationChangeSuccess', function(event, newState, oldState) {
             $rootScope.hash = $location.hash();
-            $('#slider-div').find('.icn_slider.active').removeClass('active');
-            if ($rootScope.hash == '') {
-                $('.icn_slider.home').addClass('active');
-            } else {
-                $('.icn_slider.'+$rootScope.hash).addClass('active');
-            }
+            sliderMenu($rootScope.hash);
+            console.log("old state " + oldState);
+            console.log("new state " + newState);
         });
         $rootScope.$on('$viewContentLoaded', function(event) {
             if (typeof $.fn.fullpage.destroy === 'function') {
@@ -112,24 +126,24 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider',
             }
             if ($('.slider').hasClass('slick-initialized')) {
                 $('.slider').slick('destroy');
-            } 
+            }
+            $rootScope.hash = $location.hash();
             fullPageInit();
             slickInit();
+            sliderMenu($rootScope.hash);
         });
     }
 ]);
 
 rjsmApp.controller('rjsmController', function($scope) {
     $scope.services = [
-        {num: "01", title: "Design and Development", content: "How about mapping the digital transformation journey of your business with your own app in the web and mobile market-places? From mobile apps to web apps to websites to custom software, we've got it all covered! Now, revolutionize the way you engage, interact with and convert your prospects into customers & the way you do business.", 
+        {num: "01", title: "Facility Management", content: "Facility Management  is a multifaceted discipline to ensure the functionality of the built environment by integrating people, place, process and technology. ISS is a global leader in FM and have more than 25 years of experience in this area. In ISS, FM is always provided through a self-delivery model, which we call Integrated Facility Services.", 
             link: "#/facility-management"},
-        {num: "02", title: "Facility Management", content: "Facility Management  is a multifaceted discipline to ensure the functionality of the built environment by integrating people, place, process and technology. ISS is a global leader in FM and have more than 25 years of experience in this area. In ISS, FM is always provided through a self-delivery model, which we call Integrated Facility Services.", 
-            link: "#/facility-management"},
-        {num: "03", title: "IT Solutions", content: "RJS365 is a full-service IT Cloud and Facility management services provider specializing in Network Firewalls and servers support, and maintenance.", 
+        {num: "02", title: "IT Solutions", content: "RJS365 is a full-service IT Cloud and Facility management services provider specializing in Network Firewalls and servers support, and maintenance.", 
             link: "#/it"},
-        {num: "04", title: "Real Estate", content: "A home is a cherished memory that lasts forever, it is where the walls embrace memories, the ceilings shelter love and laughter, where the quiet corners offer a much-needed pause and life itself becomes a reason to celebrate. So to make this journey joyful, we build connection with our customers from the start and being there when it matters the most - right from online search to brokers to home  or office space to paperwork to finally finding that perfect one for you.", 
+        {num: "03", title: "Real Estate", content: "A home is a cherished memory that lasts forever, it is where the walls embrace memories, the ceilings shelter love and laughter, where the quiet corners offer a much-needed pause and life itself becomes a reason to celebrate. So to make this journey joyful, we build connection with our customers from the start and being there when it matters the most - right from online search to brokers to home  or office space to paperwork to finally finding that perfect one for you.", 
             link: "#/real-estate"},
-        {num: "05", title: "Other Services", content: "We also offer wide range of serices like, Interior desings, Event Management, Automobiles and electronics.", 
+        {num: "04", title: "Other Services", content: "We also offer wide range of serices like, Interior desings, Event Management, Automobiles and electronics.", 
             link: "#/facility-management"}
     ];
 
@@ -175,13 +189,11 @@ rjsmApp.controller('rjsmController', function($scope) {
             content: "Timely preventive measures and effective treatment of pests is very essential to maintain the sanctity of the office premises. We not only take all the preventive measures to prevent any kind of infestation of the pests in the office but in any such situation our effective treatments are available to remove any such problem.", 
             secondPage: false},
         
-        {num: "09", title: "BMS (Building Management Services)", imgSrc: "assets/images/facility_management/bms.jpg", content: "", secondPage: true},
+        {num: "09", title: "BMS (Building Management Services)", imgSrc: "assets/images/facility_management/bms.jpg", 
+            content: "Dummy content", secondPage: true},
         
-        {num: "10", title: "HVAC (Heating, Ventilation and Air Conditioning)", imgSrc: "assets/images/facility_management/ac.jpg", content: "", secondPage: true},
-        
-        {num: "11", title: "DG Operations & Maintenance", imgSrc: "assets/images/facility_management/plumber.jpg", content: "", secondPage: true},
-        
-        {num: "12", title: "Carpentry Lift Operation & Maintenance",  imgSrc: "assets/images/facility_management/carpentry.jpg", content: "", secondPage: true}
+        {num: "10", title: "Carpentry Lift Operation & Maintenance",  imgSrc: "assets/images/facility_management/carpentry.jpg", 
+            content: "Dummy content", secondPage: true}
     ];
 
     $scope.itFacilities = [
@@ -221,7 +233,7 @@ rjsmApp.controller('rjsmController', function($scope) {
     $scope.realEstate = [
         {title: "BUY OR SELL PROPERTY", desc: "Residential or Commercial? We got both of it covered.", 
             subDesc: "A home is a cherished memory that lasts forever, it is where the walls embrace memories, the ceilings shelter love and laughter, where the quiet corners offer a much-needed pause and life itself becomes a reason to celebrate. So to make this journey joyful, we build connection with our customers from the start and being there when it matters the most - right from online search to brokers to home  or office space to paperwork to finally finding that perfect one for you.", 
-            imgSrc: "assets/images/real_estate/residential.jpg"},
+            imgSrc: "assets/images/real_estate/buy-sell.jpg"},
         {title: "RESIDENTIAL", desc: "Searching for a home has never been this easy", 
             subDesc: "Tired of brokers and searching multiple websites online? Let us know your preferences and we will get back to you with amazing homes with the best deals and will help you throughout each and every process until you get settled in!", 
             imgSrc: "assets/images/real_estate/residential.jpg"},
@@ -240,7 +252,9 @@ function fullPageInit() {
             $('#scroll-div').hide();
         },
         afterLoad: function(anchorLink, index) {
-            $('#scroll-div').show();
+            if (index == 1) {
+                $('#scroll-div').show();
+            }
         }
     });
 }
@@ -253,4 +267,13 @@ function slickInit() {
         nextArrow: $('#img-nav .right,'),
         useTransform: false
     });
+}
+
+function sliderMenu(hash) {
+    $('#slider-div').find('.icn_slider.active').removeClass('active');
+    if (hash == '') {
+        $('.icn_slider.home').addClass('active');
+    } else {
+        $('.icn_slider.'+hash).addClass('active');
+    }
 }

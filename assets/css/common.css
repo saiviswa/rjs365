@@ -41,9 +41,9 @@ li {
 }
 .transform-xy-50 {
 	position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 .header-title {
 	font-family: MontAltSemiBold;
@@ -79,6 +79,10 @@ li {
 	height: 22px;	
 	width: 24px;
 }
+#close {
+	width: 20px;
+	height: 20px;
+}
 #slider-div li.icn_slider.active a::before {
 	width: 24px;
 	background-color: #e82946;
@@ -109,7 +113,7 @@ li {
 }
 #slider-div li.icn_slider a {
 	width: 100%;
-  	height: 10px;
+  height: 10px;
 	font-family: PoppinsRegular;
 	font-size: 12px;
 	font-weight: normal;
@@ -133,7 +137,7 @@ li {
 }
 #footer {
 	padding: 40px 0;
-  	background-image: linear-gradient(to left, #000000, #000000);
+  background-image: linear-gradient(to left, #000000, #000000);
 }
 #footer .title {
 	font-family: SFUITextBold;
@@ -150,9 +154,9 @@ li {
 	height: 1px;
 	border: solid 1px #e82946;
 	content: '';
-    position: absolute;
-    top: 7px;
-    margin-left: 20px;
+	position: absolute;
+	top: 7px;
+	margin-left: 20px;
 }
 #footer p {
 	margin: 0 0 20px 0; 
@@ -229,8 +233,7 @@ ul {
  	display: none;
 }
 #header-menu .menu li:first-child {
-	padding-top: 40px;
-	padding-bottom: 60px;
+	padding: 50px 0;
 }
 #header-menu .menu li {
 	position: relative;
@@ -244,8 +247,8 @@ ul {
 }
 #header-menu .bottom-menu {
 	position: absolute;
-    bottom: 40px;
-    right: 60px;
+  bottom: 40px;
+  right: 60px;
 }
 #header-menu .bottom-menu li {
 	position: relative;
@@ -256,7 +259,7 @@ ul {
 	height: 30px;
 	cursor: pointer;
 }
-#header-menu li a {
+#header-menu li a, #footer-menu li a {
 	color: #ffffff;
 }
 #header-menu li.active a {
@@ -281,16 +284,16 @@ ul {
     width: 100%;
     height: 100vh;
 }
-.ad-div {
+.advt-div {
 	background-color: #fff;
 	height: 200px;
 	display: block;
 	position: relative;
 }
-.ad {
+.advt {
 	padding: 80px 0;
 }
-.ad > span {
+.advt > span {
 	font-family: PoppinsMedium;
 	font-size: 29px;
 	font-style: normal;
@@ -301,7 +304,7 @@ ul {
 	color: #e82946;
 	display: block;
 }
-.ad > span > span {
+.advt > span > span {
 	font-weight: 900;
 }
 #right-line, #left-line {
@@ -317,7 +320,7 @@ ul {
 	left: 0;
 	top: 195px;
 }
-.ad-content-div {
+.advt-content-div {
 	font-family: SFUITextRegular;
 	font-size: 20px;
 	font-weight: normal;
@@ -325,6 +328,6 @@ ul {
 	text-align: center;
 	color: #ffffff;
 }
-.ad-content-div p {
+.advt-content-div p {
 	padding: 30px 10%
 }
