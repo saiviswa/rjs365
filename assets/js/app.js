@@ -69,6 +69,23 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider',
                     css: ['assets/css/main.css', 'assets/css/it.css']
                 }
             })
+            .state('event-management', {
+                url: "/event-management",
+                views: {
+                    "headerContent": {
+                        templateUrl: "views/layout/header.html"
+                    },
+                    "mainContent": {
+                        templateUrl: "views/partial/event-management.html"
+                    },
+                    "footerContent": {
+                        templateUrl: "views/layout/footer.html"
+                    }
+                },
+                data: {
+                    css: ['assets/css/main.css', 'assets/css/event-management.css']
+                }
+            })
             .state('about-us', {
                 url: "/about-us",
                 views: {
@@ -137,28 +154,30 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider',
 
 rjsmApp.controller('rjsmController', function($scope) {
     $scope.services = [
-        {num: "01", title: "Facility Management", content: "Facility Management  is a multifaceted discipline to ensure the functionality of the built environment by integrating people, place, process and technology. ISS is a global leader in FM and have more than 25 years of experience in this area. In ISS, FM is always provided through a self-delivery model, which we call Integrated Facility Services.", 
+        {num: "01", title: "Facility Management", content: "Facility Management is a multifaceted discipline to ensure the functionality of the built environment by integrating people, place, process and technology.", 
             link: "#/facility-management"},
-        {num: "02", title: "IT Solutions", content: "RJS365 is a full-service IT Cloud and Facility management services provider specializing in Network Firewalls and servers support, and maintenance.", 
+        {num: "02", title: "Event Management", content: "We are obsessive about organization, aesthetic presentation and spend endless hours on planning each and every aspect of your event such as Weddings, celebrations, corporate events, expos, road shows etc.,", 
+            link: "#/event-management"},
+        {num: "03", title: "IT Solutions", content: "RJS365 is a full-service IT Cloud and Facility management services provider specializing in Network Firewalls and servers support, and maintenance.", 
             link: "#/it"},
-        {num: "03", title: "Real Estate", content: "A home is a cherished memory that lasts forever, it is where the walls embrace memories, the ceilings shelter love and laughter, where the quiet corners offer a much-needed pause and life itself becomes a reason to celebrate. So to make this journey joyful, we build connection with our customers from the start and being there when it matters the most - right from online search to brokers to home  or office space to paperwork to finally finding that perfect one for you.", 
+        {num: "04", title: "Real Estate", content: "A home is a cherished memory that lasts forever, it is where the walls embrace memories, the ceilings shelter love and laughter, where the quiet corners offer a much-needed pause and life itself becomes a reason to celebrate.", 
             link: "#/real-estate"},
-        {num: "04", title: "Other Services", content: "We also offer wide range of serices like, Interior desings, Event Management, Automobiles and electronics.", 
-            link: "#/facility-management"}
+        {num: "05", title: "Other Services", content: "We also offer wide range of services like Interior designs, Automobiles and Electronics.", 
+            link: ""}
     ];
 
     $scope.aboutUs = [
         {title: "AN OVERVIEW", desc: "We will help you with what we have learnt", 
-            subDesc: "RJS 365 is a full-service IT Cloud and Facility management services provider specializing in Network Firewalls and servers support, and maintenance. Right now we support businesses only in Bangalore. We are providing IT management services for Firewall, Network and Server Installations including maintenance and support. Fully qualified and certificated people work with us. We can provide L1, L2, L3 services, support, and design & implement networks. We work with small and medium sized companies. Company ability to work on different projects in term of Qualification and certifications of employees.", 
+            subDesc: "RJS365​ is a full-service IT Cloud and Facility management services provider specializing in Network Firewalls and servers support, and maintenance. Right now we support businesses only in Bangalore. We are providing IT management services for Firewall, Network and Server Installations including maintenance and support. Fully qualified and certificated people work with us. We can provide L1, L2, L3 services, support, and design & implement networks. We work with small and medium sized companies. Company ability to work on different projects in term of Qualification and certifications of employees.", 
             imgSrc: "assets/images/about_us/img-about-us.jpg"},
         {title: "WE ARE FRIENDLY", desc: "How we engage customers", 
-            subDesc: "We are a bunch of experts holding years and years of experience in services and solutions. Our team is highly knowledgeable and functional to meet any kind of business needs as and when needed. RJS 365 can work in a tight turnaround time and can yet deliver un-compromised quality services. Finest solutions at a competitive rate are what that makes us fit our client's budget and needs. We believe in overcoming challenges through our specialised values and teamwork spirit.", 
+            subDesc: "We are a bunch of experts holding years and years of experience in services and solutions. Our team is highly knowledgeable and functional to meet any kind of business needs as and when needed. RJS 365 can work in a tight turnaround time and can yet deliver un-compromised quality services. Finest solutions at a competitive rate are what that makes us fit our client’s budget and needs. We believe in overcoming challenges through our specialised values and teamwork spirit.", 
             imgSrc: "assets/images/about_us_more/img-more-about.jpg"}
     ];
 
     $scope.facilities = [
         {num: "01", title: "Front Office / Receptionist", imgSrc: "assets/images/facility_management/front_office.jpg", 
-            content: "We offer highly-skilled and self-motivated front office workers , who will play a key role by performing various administrative and clerical tasks, undertaking a variety of activities in the office, including filing, answering the phone, organizing documents, basic bookkeeping, and more. Reliability and a strong work ethic combined with great communication skills.", 
+            content: "We offer highly-skilled and self-motivated front office workers, who will play a key role by performing various administrative and clerical tasks, undertaking a variety of activities in the office, including filing, answering the phone, organizing documents, basic bookkeeping, and more. Reliability and a strong work ethic combined with great communication skills.", 
             secondPage: false},
         
         {num: "02", title: "Security", imgSrc: "assets/images/facility_management/security.jpg", 
@@ -189,11 +208,13 @@ rjsmApp.controller('rjsmController', function($scope) {
             content: "Timely preventive measures and effective treatment of pests is very essential to maintain the sanctity of the office premises. We not only take all the preventive measures to prevent any kind of infestation of the pests in the office but in any such situation our effective treatments are available to remove any such problem.", 
             secondPage: false},
         
-        {num: "09", title: "BMS (Building Management Services)", imgSrc: "assets/images/facility_management/bms.jpg", 
-            content: "Dummy content", secondPage: true},
+        // {num: "09", title: "BMS (Building Management Services)", imgSrc: "assets/images/facility_management/bms.jpg", 
+        //     content: "A building management service (BMS) buildings that controls and monitors the building's mechanical and electrical equipment such as ventilation, Lighting, Power Systems, fire systems, and Security Systems.A BMS consists of software and hardware; the software program, Vendors are also producing a BMS that integrates the use of Internet Protocols.", 
+        //     secondPage: true},
         
-        {num: "10", title: "Carpentry Lift Operation & Maintenance",  imgSrc: "assets/images/facility_management/carpentry.jpg", 
-            content: "Dummy content", secondPage: true}
+        {num: "09", title: "Carpentry Lift Operation & Maintenance",  imgSrc: "assets/images/facility_management/carpentry.jpg", 
+            content: "We aware that the customers/clients that it is necessary to know your requirements thoroughly. This helps us to create unique and stunning designs on woodworks and we provide services are at is custom-made to your exact required specifications. From initial designing, creating and fitting, our expert carpenter will take care of woodwork that looks great and is long-lasting. We can also provide a free, no-obligation quote.", 
+            secondPage: false}
     ];
 
     $scope.itFacilities = [
@@ -213,7 +234,7 @@ rjsmApp.controller('rjsmController', function($scope) {
             content: "IT Services - On-site, On-Call and Remote Support 24/7/365 system monitoring and 12/6 Remote Support Network analysis, Network security and Infrastructure planning, Backup & Disaster Recovery, IT procurement Server, Network and Desktop deployments Visualization (Server/Desktop), Data migration, IT Asset Management", 
             secondPage: false},
         
-        {num: "05", title: "Email & Collaboration Services (Private, Cloud ,In House)", imgSrc: "",  
+        {num: "05", title: "Email & Collaboration Services (Private, Cloud, In House)", imgSrc: "",  
             content: "Communicate with your teams effectively using the latest in Email Services like Zimbra. Shared group lists, distribution schemes and streamlined emailing software will all assist in making your business more efficient. Our email collaboration tools and suite is purposely utilized by all types of businesses due to it's versatile approach to streamlining mail.", 
             secondPage: false},
         
@@ -238,8 +259,30 @@ rjsmApp.controller('rjsmController', function($scope) {
             subDesc: "Tired of brokers and searching multiple websites online? Let us know your preferences and we will get back to you with amazing homes with the best deals and will help you throughout each and every process until you get settled in!", 
             imgSrc: "assets/images/real_estate/residential.jpg"},
         {title: "COMMERCIAL", desc: "Looking for a perfect office space to get you going?", 
-            subDesc: "Space has the power to transform business—unlocking the potential of people and organizations. Intentional design, warm hospitality, and flexible solutions enable your team to do its best work. Worry not! Give us a call & We'll get back to you with perfect office spaces that suits your needs.", 
+            subDesc: "Space has the power to transform business-unlocking the potential of people and organizations. Intentional design, warm hospitality, and flexible solutions enable your team to do its best work. Worry not! Give us a call & We'll get back to you with perfect office spaces that suits your needs.", 
             imgSrc: "assets/images/real_estate/commercial.jpg"}
+    ];
+
+    $scope.eventFacilities = [
+        {num: "01", title: "Wedding Events", imgSrc: "assets/images/event_management/wedding.jpg", 
+            content: "Our approach to wedding design is sophisticated, personal, and highly attentive. After all, we want planning your wedding to be half the fun. We work closely with our brides and grooms to put together unforgettable moments.", 
+        },
+        
+        {num: "02", title: "Birthdays", imgSrc: "assets/images/event_management/birthday.jpg", 
+            content: "All you have to do is be the supermom or superdad that trusts our experts and pampers their child with the most creative birthday party games, jolly birthday party decorations and fun-filled birthday party themes.", 
+        },
+        
+        {num: "03", title: "Corporate Events", imgSrc: "assets/images/event_management/corporate.jpg",  
+            content: "We believe your need to promote your brand, motivate employees or market your product. We plan conceptualized event and implement meetings, communicate your business or sales strategy in the most motivational environment with the show makers.", 
+        },
+        
+        {num: "04", title: "Catering", imgSrc: "assets/images/event_management/catering.jpg",  
+            content: "Food and entertainment have always been essential ingredients of every occasion that calls for a celebration. Our expertise in these two areas, through our catering and event management services, forms the essence of our name 'Celebrations'.", 
+        },
+        
+        {num: "05", title: "Event Photographers", imgSrc: "assets/images/event_management/event-photographers.jpg",  
+            content: "Offers a dynamic range of professional event photography services. Enquire us Today to get in all the details required for your Special Events.", 
+        }
     ];
 });
 

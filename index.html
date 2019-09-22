@@ -35,6 +35,9 @@
                 <li class="item" ng-class="{'active' : curPage == 'facility-management'}">
                     <a ng-href="{{'#/facility-management'}}">Facility Management</a>
                 </li>
+                <li class="item" ng-class="{'active' : curPage == 'event-management'}">
+                    <a ng-href="{{'#/event-management'}}">Event Management</a>
+                </li>
                 <li class="item" ng-class="{'active' : curPage == 'it'}">
                     <a ng-href="{{'#/it'}}">IT Solutions</a>
                 </li>
@@ -119,7 +122,7 @@
                                             {{service.content}}
                                         </p>
                                     </div>
-                                    <div class="explore-services">
+                                    <div class="explore-services" ng-if="service.link">
                                         <a ng-href="{{service.link}}">EXPLORE SERVICES</a>
                                     </div>
                                 </div>

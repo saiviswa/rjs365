@@ -1,23 +1,22 @@
-<div id="facility-mgmt-div" class="facility-mgmt">
+<div id="event-mgmt-div" class="event-mgmt">
     <div class="col-12 desc-img-row">
         <div class="col-6 desc-div">
-            <p class="title">WE PROVIDE MANPOWER</p>
+            <p class="title">EXCLUSIVITY AT ITS BEST</p>
             <p class="desc">
-                <!-- We believe your need to promote your brand, motivate employees or market your product. -->
-                We offer wide range of Facility Management services
+                Best services for Event Organization
             </p>
             <p class="sub-desc">
-                Facility Management is a multifaceted discipline to ensure the functionality of the built environment by integrating people, place, process and technology.
+                We are obsessive about organization, aesthetic presentation and spend endless hours on planning each and every aspect of your event such as Weddings, celebrations, corporate events, expos, road shows or any other event you have in mind, we are here to turn into a grand and never-ever-seen-before event. Our fanatical attention to get everything picture perfect results in a faultless and exceptional event and party organization.
             </p>
         </div>
         <div class="col-8 desc-img">
-            <img src="assets/images/about_us_more/img-more-about.jpg">
+            <img src="assets/images/event_management/event-management.jpg">
         </div>
     </div>
     <div ng-controller='rjsmController'>
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-6 each-service" ng-repeat="facility in facilities" ng-if="!facility.secondPage">
+                <div class="col-lg-4 col-6 each-service" ng-repeat="facility in eventFacilities">
                     <div class="service-img">
                         <img ng-src="{{facility.imgSrc}}">
                     </div>

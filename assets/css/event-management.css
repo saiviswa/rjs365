@@ -1,0 +1,26 @@
+html, body {
+	overflow: auto !important;
+}
+body {
+	background-image: linear-gradient(to left, #000000, #000000) !important;
+}
+#event-mgmt-div .desc-img-row {
+	margin-bottom: 60px;
+}
+.each-service .service-img {
+	margin-bottom: 20px;
+}
+.each-service .service-img img {
+	width: 100%;
+	max-height: 162px;
+}
+#event-mgmt-div {
+	margin-bottom: 60px;
+	margin: 0 150px;
+}
+.event-mgmt {
+	padding-top: 20vh;
+}
+.service-title {
+	height: 100px;
+}
