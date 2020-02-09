@@ -86,6 +86,57 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider',
                     css: ['assets/css/main.css', 'assets/css/event-management.css']
                 }
             })
+            .state('automobiles', {
+                url: "/automobiles",
+                views: {
+                    "headerContent": {
+                        templateUrl: "views/layout/header.html"
+                    },
+                    "mainContent": {
+                        templateUrl: "views/partial/automobiles.html"
+                    },
+                    "footerContent": {
+                        templateUrl: "views/layout/footer.html"
+                    }
+                },
+                data: {
+                    css: ['assets/css/main.css', 'assets/css/automobiles.css']
+                }
+            })
+            .state('interior-design', {
+                url: "/interior-design",
+                views: {
+                    "headerContent": {
+                        templateUrl: "views/layout/header.html"
+                    },
+                    "mainContent": {
+                        templateUrl: "views/partial/interior-design.html"
+                    },
+                    "footerContent": {
+                        templateUrl: "views/layout/footer.html"
+                    }
+                },
+                data: {
+                    css: ['assets/css/main.css', 'assets/css/interior-design.css']
+                }
+            })
+            .state('electronics', {
+                url: "/electronics",
+                views: {
+                    "headerContent": {
+                        templateUrl: "views/layout/header.html"
+                    },
+                    "mainContent": {
+                        templateUrl: "views/partial/electronics.html"
+                    },
+                    "footerContent": {
+                        templateUrl: "views/layout/footer.html"
+                    }
+                },
+                data: {
+                    css: ['assets/css/main.css', 'assets/css/electronics.css']
+                }
+            })
             .state('about-us', {
                 url: "/about-us",
                 views: {
@@ -219,36 +270,36 @@ rjsmApp.controller('rjsmController', function($scope) {
 
     $scope.itFacilities = [
         {num: "01", title: "Managed Cloud Services", imgSrc: "", 
-            content: "18/6 Support, Hosted Servers and Desktops, Email Security and Business Continuity, Managed Anti-Virus Cloud Storage and Backup.", 
-            secondPage: false},
+            content: "18/6 Support, Hosted Servers and Desktops, Email Security and Business Continuity, Managed Anti-Virus Cloud Storage and Backup."
+        },
         
         {num: "02", title: "MIS & Cloud Services", imgSrc: "", 
-            content: "We provide IT infrastructure/email/firewall support and other IT solutions based on open source to various corporate clients across the world. We believe that open source is the best way to serve clients and society providing a true value services on a platform that blends into their setup of diverse natures and requirements.", 
-            secondPage: false},
+            content: "We provide IT infrastructure/email/firewall support and other IT solutions based on open source to various corporate clients across the world. We believe that open source is the best way to serve clients and society providing a true value services on a platform that blends into their setup of diverse natures and requirements."
+        },
         
         {num: "03", title: "Firewall Solutions", imgSrc: "",  
-            content: "Network Address Translation (NAT), High Availability, Multi-WAN, Server Load Balancing,Virtual Private Network (VPN): IPsec, OpenVPN, PPTP Server, PPPoE Server, Reporting and Monitoring : RRD Graphs, Dynamic DNS, Captive Portal, DHCP Server and Relay and much more", 
-            secondPage: false},
+            content: "Network Address Translation (NAT), High Availability, Multi-WAN, Server Load Balancing,Virtual Private Network (VPN): IPsec, OpenVPN, PPTP Server, PPPoE Server, Reporting and Monitoring : RRD Graphs, Dynamic DNS, Captive Portal, DHCP Server and Relay and much more"
+        },
         
         {num: "04", title: "Manage Infrastructure Service (MIS) - IT Services", imgSrc: "",  
-            content: "IT Services - On-site, On-Call and Remote Support 24/7/365 system monitoring and 12/6 Remote Support Network analysis, Network security and Infrastructure planning, Backup & Disaster Recovery, IT procurement Server, Network and Desktop deployments Visualization (Server/Desktop), Data migration, IT Asset Management", 
-            secondPage: false},
+            content: "IT Services - On-site, On-Call and Remote Support 24/7/365 system monitoring and 12/6 Remote Support Network analysis, Network security and Infrastructure planning, Backup & Disaster Recovery, IT procurement Server, Network and Desktop deployments Visualization (Server/Desktop), Data migration, IT Asset Management"
+        },
         
         {num: "05", title: "Email & Collaboration Services (Private, Cloud, In House)", imgSrc: "",  
-            content: "Communicate with your teams effectively using the latest in Email Services like Zimbra. Shared group lists, distribution schemes and streamlined emailing software will all assist in making your business more efficient. Our email collaboration tools and suite is purposely utilized by all types of businesses due to it's versatile approach to streamlining mail.", 
-            secondPage: false},
+            content: "Communicate with your teams effectively using the latest in Email Services like Zimbra. Shared group lists, distribution schemes and streamlined emailing software will all assist in making your business more efficient. Our email collaboration tools and suite is purposely utilized by all types of businesses due to it's versatile approach to streamlining mail."
+        },
         
         {num: "06", title: "IT Installations & Migration", imgSrc: "",  
-            content: "Making changes to your IT systems doesn't need to be a major headache - allow IT Outcomes to organize and implement everything for you, from the infrastructure to checking everything works at the end of the project.", 
-            secondPage: false},
+            content: "Making changes to your IT systems doesn't need to be a major headache - allow IT Outcomes to organize and implement everything for you, from the infrastructure to checking everything works at the end of the project."
+        },
         
         {num: "07", title: "Network & Security", imgSrc: "",  
-            content: "18/6 Support, Hosted Servers and Desktops, Email Security and Business Continuity, Managed Anti-Virus Cloud Storage and Backup.", 
-            secondPage: false},
+            content: "18/6 Support, Hosted Servers and Desktops, Email Security and Business Continuity, Managed Anti-Virus Cloud Storage and Backup."
+        },
         
         {num: "08", title: "Visualization Services", imgSrc: "",  
-            content: "In the current very hard climate of budget constraints and streamlining of every organization operational running costs, VMWare is a fantastic tool offering a wide range of user cost savings and benefits. With a virtual infrastructure a System Administrator gains the advantage of managing pooled resources across the entire organization, allowing their IT managers to be more responsive to dynamic operational needs.", 
-            secondPage: false}
+            content: "In the current very hard climate of budget constraints and streamlining of every organization operational running costs, VMWare is a fantastic tool offering a wide range of user cost savings and benefits. With a virtual infrastructure a System Administrator gains the advantage of managing pooled resources across the entire organization, allowing their IT managers to be more responsive to dynamic operational needs."
+        }
     ];
 
     $scope.realEstate = [
@@ -282,6 +333,66 @@ rjsmApp.controller('rjsmController', function($scope) {
         
         {num: "05", title: "Event Photographers", imgSrc: "assets/images/event_management/event-photographers.jpg",  
             content: "Offers a dynamic range of professional event photography services. Enquire us Today to get in all the details required for your Special Events.", 
+        }
+    ];
+
+    $scope.automobiles = [
+        {title: "FIND THE BEST DEALS", desc: "We also provide services for Automobiles; Sales & Services", 
+        subDesc: "Look no further, with our wide network we can offer you a deal like no one else on used cars and as well as get you the best mechanic to maintain the car in top condition.", 
+        secondPage: false, imgSrc: "assets/images/automobiles/img.jpg"
+        },
+        {title: "BUY PRE-OWNED CARS", desc: "Looking for the perfect car to match your needs?", 
+        subDesc: "Tired of searching through different websites to get the car you like? And after the tedious process, get a mechanic to check if the car is in good condition? Well, that’s where we come in - We give you the best deals on wide range of TOP condition cars for you to choose from and also check the car for any mechanical problems and such.", 
+        secondPage: false, imgSrc: "assets/images/automobiles/img1.jpg"
+        },
+        {title: "SELL USED CARS", desc: "Want to make a switch to a new car?", 
+        subDesc: "Got bored of riding the same car for years and want to make a switch but afraid that you might get lower costs? Look no further - We will get you the best deal in the market for your precious car.", 
+        secondPage: false, imgSrc: "assets/images/automobiles/img2.jpg"
+        },
+        {title: "SERVICING", desc: "Maintaining cars has never been this easy", 
+        subDesc: "We have contacts with the best mechanics with affordable prices to get your car back in top condition!", 
+        secondPage: false, imgSrc: "assets/images/automobiles/img3.jpg"
+        },
+        {title: "BUY PRE-OWNED BIKES", desc: "Looking for a sense of freedom which you don't get in car?", 
+        subDesc: "With our network, you can get the beloved bike that you desire and what else? Yes, along with the best deal that you can possibly get.", 
+        secondPage: true, imgSrc: "assets/images/automobiles/img4.jpg"
+        }
+    ];
+
+    $scope.interiorDesigns = [
+        {title: "FIND THE BEST DEALS", desc: "Curate your experience with our innovative designs.", 
+        subDesc: "Look no futher, with our wide network we can offer you a deal like no one else on used cars and as well as get you the best mechanic to maintain the car in top condition.", 
+        imgSrc: "assets/images/interior_design/img.jpg", hasList: false
+        },
+        {title: "A CUSTOM HOME, FOR A CUSTOM YOU.", desc: "Crafting interiors to its finest.", 
+        subDesc: "We are passionate about crafting. Whether your project is of a construction nature or you are in the stages of furnishing, we would craft your space through the finest details ever.", 
+        imgSrc: "assets/images/interior_design/img1.jpg", hasList: true
+        },
+        {title: "CLASSY, CORPORATE", desc: "Beautifully crafted space, for the classy you.", 
+        subDesc: "Whether your space is administrative, executive or office floor plan, we drive to help you meet your requirements.", 
+        imgSrc: "assets/images/interior_design/img2.jpg", hasList: false
+        }
+    ];
+
+    $scope.electronicFacilities = [
+        {num: "01", title: "Patient, Friendly Advisors", imgSrc: "assets/images/electronics/img.jpg", 
+        content: "It's a little bit like visiting a doctor. Don't you like it when your doctor has an understanding ear, and explains the ailment to you?"
+        },
+        
+        {num: "02", title: "Quality parts, Warranty", imgSrc: "assets/images/electronics/img1.jpg", 
+        content: "We use only the highest quality spare parts. All repairs carry a min. 90 days warranty. Not just a working device, peace of mind is paramount too!"
+        },
+        
+        {num: "03", title: "Skilled, Certified technicians", imgSrc: "assets/images/electronics/img2.jpg", 
+        content: "All things considered, the quality of service is only as good as the expertise of the repairman. Workmanship matters!"
+        },
+        
+        {num: "04", title: "Doorstep Service", imgSrc: "assets/images/electronics/img3.jpg", 
+        content: "Traffic is bad, we know, the hassle. We have free* doorstep service, and free* pickup & drop options. Don't leave home!"
+        },
+        
+        {num: "05", title: "All Repairs Under One Roof", imgSrc: "assets/images/electronics/img4.jpg", 
+        content: "All Brand devices, all repairs, we are your one-stop shop. We're probably the only one in town who do L4 chip-level repair on Logic boards, arguably :)"
         }
     ];
 });

@@ -1,0 +1,25 @@
+html, body {
+	overflow: auto !important;
+}
+body {
+	background-image: linear-gradient(to left, #000000, #000000) !important;
+}
+#automobiles-div .desc-img-row {
+	margin-bottom: 60px;
+}
+.each-service .service-img {
+	margin-bottom: 20px;
+}
+.each-service .service-img img {
+	width: 100%;
+}
+#automobiles-div {
+	margin-bottom: 60px;
+	margin: 0 150px;
+}
+.automobiles {
+	padding-top: 20vh;
+}
+.advt-div {
+	margin-bottom: 60px;
+}

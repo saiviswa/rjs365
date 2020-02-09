@@ -1,0 +1,84 @@
+html, body {
+	overflow: auto !important;
+}
+body {
+	background-image: linear-gradient(to left, #000000, #000000) !important;
+}
+#electronics-div .desc-img-row {
+	margin-bottom: 60px;
+}
+.each-service .service-img {
+	margin-bottom: 20px;
+}
+.each-service .service-img img {
+	width: 100%;
+}
+#electronics-div {
+	margin-bottom: 60px;
+	margin: 0 150px;
+}
+.electronics {
+	padding-top: 20vh;
+}
+.advt-div {
+	margin-bottom: 60px;
+}
+.electronics .desc-div > ul > li {
+	float: left;
+	padding: 10px;
+}
+.electronics .desc-div > ul.line1 {
+	height: 100px;
+}
+ul.inner li:first-child {
+	padding-bottom: 10px;
+}
+.electronics ul li img {
+	height: 50px;
+	width: 50px;
+}
+#electronics-div {
+	margin: 0 150px;
+}
+.electronics-advt-div {
+	background-color: #e82946;
+	padding: 60px 150px 40px;
+	position: relative;
+}
+.electronics-advt-div .title {
+	font-family: SFUITextBold;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: normal;
+	color: #ffffff;
+	margin: 0;
+	margin-bottom: 20px;
+	position: relative;
+}
+.electronics-advt-div .desc {
+	font-family: PoppinsMedium;
+	font-size: 40px;
+	font-weight: 500;
+	line-height: 1.63;
+	color: #ffffff;
+	margin: 0;
+	margin-bottom: 20px;
+}
+.electronics-advt-div .sub-desc {
+	width: 492px;
+	height: 39px;
+	font-family: SFUITextRegular;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 2.15;
+	color: #ffffff;
+}
+.electronics-advt-div p.title::after {
+	width: 52px;
+	height: 1px;
+	border: solid 1px #ffffff;
+	content: '';
+	position: absolute;
+	top: 7px;
+	margin-left: 20px;
+}

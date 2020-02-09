@@ -1,0 +1,24 @@
+<div id="interior-design-div" class="interior-design">
+    <div ng-controller='rjsmController'>
+        <div class="col-12 desc-img-row" ng-repeat="interiorDesign in interiorDesigns">
+            <div class="col-6 desc-div">
+                <p class="title">{{interiorDesign.title}}</p>
+                <p class="desc">
+                    {{interiorDesign.desc}}
+                </p>
+                <p class="sub-desc">
+                    {{interiorDesign.subDesc}}
+                </p>
+                <ul ng-if="interiorDesign.hasList">
+                    <li>> Thoughtful Planning</li>
+                    <li>> Curated furnishings</li>
+                    <li>> Architecture and Space Planning</li>
+                    <li>> Design and Decorating</li>
+                </ul>
+            </div>
+            <div class="col-8 desc-img">
+                <img src="{{interiorDesign.imgSrc}}">
+            </div>
+        </div>
+    </div>
+</div>

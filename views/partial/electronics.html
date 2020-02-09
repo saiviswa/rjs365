@@ -1,0 +1,68 @@
+<div id="electronics-div" class="electronics">
+    <div class="col-12 desc-img-row">
+        <div class="col-6 desc-div">
+            <p class="title">SERVICES</p>
+            <p class="desc">
+                We specialize in repairing all kind of brands; Laptops, PC & Mobile phones
+            </p>
+            <ul class="line1">
+                <li><img src="assets/images/electronics/logos/apple.png"/></li>
+                <li><img src="assets/images/electronics/logos/dell.png"/></li>
+                <li><img src="assets/images/electronics/logos/hp.png"/></li>
+                <li>
+                    <ul class="inner">
+                        <li><img src="assets/images/electronics/logos/samsung.png" style="width:50%; height:50%;"/></li>
+                        <li><img src="assets/images/electronics/logos/lenovo.png" style="width:50%; height:50%;"/></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li><img src="assets/images/electronics/logos/android.png"/></li>
+                <li><img src="assets/images/electronics/logos/windows.png"/></li>
+            </ul>
+        </div>
+        <div class="col-8 desc-img">
+            <img src="assets/images/electronics/electronics.jpg">
+        </div>
+    </div>
+    <div ng-controller='rjsmController'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-6 each-service" ng-repeat="electronicFacility in electronicFacilities">
+                    <div class="service-img">
+                        <img src="{{electronicFacility.imgSrc}}">
+                    </div>
+                    <div class="service-title">
+                        <span class="num">{{electronicFacility.num}}</span>
+                        <span class="dash"></span>
+                        <span class="title-txt">{{electronicFacility.title}}</span>
+                    </div>
+                    <div class="service-desc">
+                        <p>
+                            {{electronicFacility.content}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="electronics-advt-div">
+    <p class="title">ALSO, OTHER PROUCTS</p>
+    <p class="desc">
+        Not just Apple, we support all other major brands like Lenovo, Samsung, HP, Dell & many more.
+    </p>
+</div>
+<div id="electronics-div" class="electronics">
+    <div class="col-12 desc-img-row">
+        <div class="col-6 desc-div">
+            <p class="title">SALES</p>
+            <p class="desc">
+                Need a new laptop? iPhone? Samsung? Pixel? Any other brands? We got you covered!
+            </p>
+        </div>
+        <div class="col-8 desc-img">
+            <img src="assets/images/electronics/electronics1.jpg">
+        </div>
+    </div>
+</div>

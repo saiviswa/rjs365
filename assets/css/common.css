@@ -246,7 +246,7 @@ ul {
 	cursor: pointer;
 }
 #header-menu .bottom-menu {
-	position: absolute;
+	/* position: absolute; */
   bottom: 40px;
   right: 60px;
 }
@@ -280,9 +280,9 @@ ul {
 }
 .single-page-content {
 	display: table-cell;
-    vertical-align: middle;
-    width: 100%;
-    height: 100vh;
+	vertical-align: middle;
+	width: 100%;
+	height: 100vh;
 }
 .advt-div {
 	background-color: #fff;

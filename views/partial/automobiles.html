@@ -1,0 +1,43 @@
+<div id="automobiles-div" class="automobiles">
+    <div ng-controller='rjsmController'>
+        <div class="col-12 desc-img-row" ng-repeat="automobile in automobiles" ng-if="!automobile.secondPage">
+            <div class="col-6 desc-div">
+                <p class="title">{{automobile.title}}</p>
+                <p class="desc">
+                    {{automobile.desc}}
+                </p>
+                <p class="sub-desc">
+                    {{automobile.subDesc}}
+                </p>
+            </div>
+            <div class="col-8 desc-img">
+                <img src="{{automobile.imgSrc}}">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="advt-div">
+    <div id="right-line"></div>
+    <div class="advt">
+        <span>Not just cars, we services also offer for Bikes!</span>
+    </div>
+    <div id="left-line"></div>
+</div>
+<div id="automobiles-div" class="automobiles">
+    <div ng-controller='rjsmController'>
+        <div class="col-12 desc-img-row" ng-repeat="automobile in automobiles" ng-if="automobile.secondPage">
+            <div class="col-6 desc-div">
+                <p class="title">{{automobile.title}}</p>
+                <p class="desc">
+                    {{automobile.desc}}
+                </p>
+                <p class="sub-desc">
+                    {{automobile.subDesc}}
+                </p>
+            </div>
+            <div class="col-8 desc-img">
+                <img src="{{automobile.imgSrc}}">
+            </div>
+        </div>
+    </div>
+</div>

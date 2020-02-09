@@ -1,0 +1,28 @@
+html, body {
+	overflow: auto !important;
+}
+body {
+	background-image: linear-gradient(to left, #000000, #000000) !important;
+}
+#interior-design-div .desc-img-row {
+	margin-bottom: 60px;
+}
+.each-service .service-img {
+	margin-bottom: 20px;
+}
+.each-service .service-img img {
+	width: 100%;
+}
+#interior-design-div {
+	margin-bottom: 60px;
+	margin: 0 150px;
+}
+.interior-design {
+	padding-top: 20vh;
+}
+.interior-design ul {
+	color: #FFFFFF;
+	font-family: SFUITextRegular;
+	font-size: 13px;
+	line-height: 28px;
+}
