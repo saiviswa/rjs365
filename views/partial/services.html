@@ -1,0 +1,27 @@
+<div id="services-div">
+    <div id="what-we-offer">
+        <span>WHAT WE OFFER</span>
+    </div>
+    <div id="our-services">
+        Our services
+    </div>
+    <div id="all-services" class="container">
+        <div class="row">
+            <div class="col-lg-4 col-6 each-service" service-hover ng-repeat="service in services">
+                <div class="service-title">
+                    <div class="num">{{service.num}}</div>
+                    <div class="dash"></div>
+                    <div class="title-txt">{{service.title}}</div>
+                </div>
+                <div class="service-desc">
+                    <p>
+                        {{service.content}}
+                    </p>
+                </div>
+                <div class="explore-services" ng-if="service.link">
+                    <a ng-href="{{service.link}}">EXPLORE SERVICES</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

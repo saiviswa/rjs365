@@ -1,0 +1,13 @@
+<div ng-controller='rjsmController'>
+  <ul class="menu">
+      <li><img id="close" src="assets/images/close.svg" header-menu/></li>
+      <li class="item" ng-class="{{eachMenu.ngClass}}" ng-repeat="eachMenu in hamburgerMenu" ng-if="eachMenu.bottomMenu==false">
+          <a ng-href="{{eachMenu.src}}">{{eachMenu.text}}</a>
+      </li>
+  </ul>
+  <ul class="bottom-menu">
+      <li class="item" ng-class="{{eachMenu.ngClass}}" ng-repeat="eachMenu in hamburgerMenu" ng-if="eachMenu.bottomMenu">
+          <a ng-href="{{eachMenu.src}}">{{eachMenu.text}}</a>
+      </li>
+  </ul>
+</div>

@@ -1,0 +1,23 @@
+<div id="team-div">
+    <div class="col-12 desc-img-row">
+        <div class="col-6 desc-div">
+            <p class="title">BEHIND THE SCENES</p>
+            <p class="desc">
+                Team
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 team-member" ng-repeat="teamMember in teamMembers">
+                <div class="team-img">
+                    <img ng-src="{{teamMember.imgSrc}}">
+                </div>
+                <div class="team-info">
+                    <div class="name">{{teamMember.name}}</div>
+                    <div class="designation">{{teamMember.designation}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

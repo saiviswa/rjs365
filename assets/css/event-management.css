@@ -1,9 +1,6 @@
 html, body {
 	overflow: auto !important;
 }
-body {
-	background-image: linear-gradient(to left, #000000, #000000) !important;
-}
 #event-mgmt-div .desc-img-row {
 	margin-bottom: 60px;
 }
@@ -23,4 +20,7 @@ body {
 }
 .service-title {
 	height: 100px;
+}
+.each-service {
+	margin-bottom: 20px;
 }

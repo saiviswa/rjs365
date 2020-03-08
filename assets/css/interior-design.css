@@ -1,9 +1,6 @@
 html, body {
 	overflow: auto !important;
 }
-body {
-	background-image: linear-gradient(to left, #000000, #000000) !important;
-}
 #interior-design-div .desc-img-row {
 	margin-bottom: 60px;
 }
@@ -25,4 +22,5 @@ body {
 	font-family: SFUITextRegular;
 	font-size: 13px;
 	line-height: 28px;
+	margin-bottom: 20px;
 }

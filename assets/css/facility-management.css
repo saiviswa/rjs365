@@ -1,9 +1,6 @@
 html, body {
 	overflow: auto !important;
 }
-body {
-	background-image: linear-gradient(to left, #000000, #000000) !important;
-}
 #facility-mgmt-div .desc-img-row {
 	margin-bottom: 60px;
 }
@@ -21,5 +18,5 @@ body {
 	padding-top: 20vh;
 }
 .service-title {
-	height: 100px;
+	padding-bottom: 20px;
 }

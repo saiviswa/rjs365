@@ -1,9 +1,6 @@
 html, body {
 	overflow: auto !important;
 }
-body {
-	background-image: linear-gradient(to left, #000000, #000000) !important;
-}
 #electronics-div .desc-img-row {
 	margin-bottom: 60px;
 }

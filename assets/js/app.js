@@ -12,6 +12,21 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider',
                     },
                     "footerContent": {
                         templateUrl: "views/layout/footer.html"
+                    },
+                    "hamburgerView": {
+                        templateUrl: "views/partial/hamburger.html"
+                    },
+                    "landingView": {
+                        templateUrl: "views/partial/landing.html"
+                    },
+                    "servicesView": {
+                        templateUrl: "views/partial/services.html"
+                    },
+                    "clientsView": {
+                        templateUrl: "views/partial/clients.html"
+                    },
+                    "teamView": {
+                        templateUrl: "views/partial/team.html"
                     }
                 },
                 data: {
@@ -136,40 +151,6 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider',
                 data: {
                     css: ['assets/css/main.css', 'assets/css/electronics.css']
                 }
-            })
-            .state('about-us', {
-                url: "/about-us",
-                views: {
-                    "headerContent": {
-                        templateUrl: "views/layout/header.html"
-                    },
-                    "mainContent": {
-                        templateUrl: "views/partial/about-us.html"
-                    },
-                    "footerContent": {
-                        templateUrl: "views/layout/footer.html"
-                    }
-                },
-                data: {
-                    css: ['assets/css/about-us.css', 'assets/css/main.css']
-                }
-            })
-            .state('clients', {
-                url: "/our-clients",
-                views: {
-                    "headerContent": {
-                        templateUrl: "views/layout/header.html"
-                    },
-                    "mainContent": {
-                        templateUrl: "views/partial/clients.html"
-                    },
-                    "footerContent": {
-                        templateUrl: "views/layout/footer.html"
-                    }
-                },
-                data: {
-                    css: ['assets/css/about-us.css', 'assets/css/main.css']
-                }
             });
         $urlRouterProvider.otherwise("home");
     }
@@ -207,27 +188,31 @@ rjsmApp.controller('rjsmController', function($scope) {
     $scope.services = [
         {num: "01", title: "Facility Management", content: "Facility Management is a multifaceted discipline to ensure the functionality of the built environment by integrating people, place, process and technology.", 
             link: "#/facility-management"},
-        {num: "02", title: "Event Management", content: "We are obsessive about organization, aesthetic presentation and spend endless hours on planning each and every aspect of your event such as Weddings, celebrations, corporate events, expos, road shows etc.,", 
-            link: "#/event-management"},
-        {num: "03", title: "IT Solutions", content: "RJS365 is a full-service IT Cloud and Facility management services provider specializing in Network Firewalls and servers support, and maintenance.", 
+        {num: "02", title: "IT Solutions", content: "RJS365 is a full-service IT Cloud and Facility management services provider specializing in Network Firewalls and servers support, and maintenance.", 
             link: "#/it"},
-        {num: "04", title: "Real Estate", content: "A home is a cherished memory that lasts forever, it is where the walls embrace memories, the ceilings shelter love and laughter, where the quiet corners offer a much-needed pause and life itself becomes a reason to celebrate.", 
+        {num: "03", title: "Electronics", content: "We specialize in sales and services for all kind of brands; Laptops, PC & Mobile phones", 
+            link: "#/electronics"},
+        {num: "04", title: "Real Estate", content: "We make finding home joyful, we build connection with our customers from the start and being there when it matters the most - right from online search to brokers to home  or office space to paperwork to finally finding that perfect one for you.", 
             link: "#/real-estate"},
-        {num: "05", title: "Other Services", content: "We also offer wide range of services like Interior designs, Automobiles and Electronics.", 
-            link: ""}
+        {num: "05", title: "Automobiles", content: "We also provide services for Automobiles; Sales & Services", 
+            link: "#/automobiles"},
+        {num: "06", title: "Event Management", content: "We are obsessive about organization, aesthetic presentation and spend endless hours on planning each and every aspect of your event such as Weddings, celebrations, corporate events, expos, road shows etc.,", 
+            link: "#/event-management"},
+        {num: "07", title: "Interior Design", content: "Curate your experience with our innovative designs.", 
+            link: "#/interior-design"}
     ];
 
     $scope.aboutUs = [
         {title: "AN OVERVIEW", desc: "We will help you with what we have learnt", 
-            subDesc: "RJS365​ is a full-service IT Cloud and Facility management services provider specializing in Network Firewalls and servers support, and maintenance. Right now we support businesses only in Bangalore. We are providing IT management services for Firewall, Network and Server Installations including maintenance and support. Fully qualified and certificated people work with us. We can provide L1, L2, L3 services, support, and design & implement networks. We work with small and medium sized companies. Company ability to work on different projects in term of Qualification and certifications of employees.", 
+            subDesc: "RJS365 is a full-service IT Cloud and Facility management services provider specializing in Network Firewalls and servers support, and maintenance. Right now we support businesses only in Bangalore. We are providing IT management services for Firewall, Network and Server Installations including maintenance and support. Fully qualified and certificated people work with us. We can provide L1, L2, L3 services, support, and design & implement networks. We work with small and medium sized companies. Company ability to work on different projects in term of Qualification and certifications of employees.", 
             imgSrc: "assets/images/about_us/img-about-us.jpg"},
         {title: "WE ARE FRIENDLY", desc: "How we engage customers", 
-            subDesc: "We are a bunch of experts holding years and years of experience in services and solutions. Our team is highly knowledgeable and functional to meet any kind of business needs as and when needed. RJS 365 can work in a tight turnaround time and can yet deliver un-compromised quality services. Finest solutions at a competitive rate are what that makes us fit our client’s budget and needs. We believe in overcoming challenges through our specialised values and teamwork spirit.", 
+            subDesc: "We are a bunch of experts holding years and years of experience in services and solutions. Our team is highly knowledgeable and functional to meet any kind of business needs as and when needed. RJS 365 can work in a tight turnaround time and can yet deliver un-compromised quality services. Finest solutions at a competitive rate are what that makes us fit our client's budget and needs. We believe in overcoming challenges through our specialised values and teamwork spirit.", 
             imgSrc: "assets/images/about_us_more/img-more-about.jpg"}
     ];
 
     $scope.facilities = [
-        {num: "01", title: "Front Office / Receptionist", imgSrc: "assets/images/facility_management/front_office.jpg", 
+        {num: "01", title: "Admin / Front Office / Receptionist", imgSrc: "assets/images/facility_management/front_office.jpg", 
             content: "We offer highly-skilled and self-motivated front office workers, who will play a key role by performing various administrative and clerical tasks, undertaking a variety of activities in the office, including filing, answering the phone, organizing documents, basic bookkeeping, and more. Reliability and a strong work ethic combined with great communication skills.", 
             secondPage: false},
         
@@ -242,30 +227,38 @@ rjsmApp.controller('rjsmController', function($scope) {
         {num: "04", title: "Electricians", imgSrc: "assets/images/facility_management/electricians.jpg",  
             content: "We have experienced Electricians to undertake a variety of tasks relating to setting up and maintaining electrical infrastructure which will also involve installing electrical wiring in buildings and poles, troubleshooting malfunctions and blackouts and repairing appliances.", 
             secondPage: false},
-        
-        {num: "05", title: "Pantry & Cafeteria Management", imgSrc: "assets/images/facility_management/pantry.jpg",  
+
+        {num: "05", title: "A/C Maintenance services", imgSrc: "assets/images/facility_management/ac.jpg",  
+            content: "Feeling the heat and getting frustrated? Our core business revolves around running on-site service centres.", 
+            secondPage: false},
+
+        {num: "06", title: "Mail Room", imgSrc: "assets/images/facility_management/mailroom.jpg",  
+            content: "Our core business revolves around running on-site service centres with mail and logistics, generally providing the hub for service delivery options.", 
+            secondPage: false},
+
+        {num: "07", title: "Carpentry Lift Operation & Maintenance",  imgSrc: "assets/images/facility_management/carpentry.jpg", 
+            content: "We create unique and stunning designs on woodworks and we provide services are at is custom-made to your exact required specifications. From initial designing, creating and fitting, our expert carpenter will take care of woodwork that looks great and is long-lasting.", 
+            secondPage: false},
+
+        {num: "08", title: "Plumber", imgSrc: "assets/images/facility_management/plumber.jpg",  
+            content: "We have experienced Plumbers to efficiently undertake a variety of plumbing tasks ranging from fixing leakages to installing pipes and HVAC systems. A successful plumber must have a thorough knowledge of hydraulic systems. They are patient individuals with a practical mind and manual dexterity, able to work efficiently with great attention to detail.", 
+            secondPage: false},
+            
+        {num: "09", title: "Pantry & Cafeteria Management", imgSrc: "assets/images/facility_management/pantry.jpg",  
             content: "RJS 365 provides well groomed, skilled and experienced staff for serving food & Beverage in Pantry & cafeteria. Our Pantry & cafeteria staff is not only thoroughly trained for proper table service and F&B Service skills but they are also trained on behavioral skills (i.e. Courtesy, soft spoken-ness etc.) so that the best of service can be provided to our client.", 
             secondPage: false},
         
-        {num: "06", title: "Plumber", imgSrc: "assets/images/facility_management/plumber.jpg",  
-            content: "We have experienced Plumbers to efficiently undertake a variety of plumbing tasks ranging from fixing leakages to installing pipes and HVAC systems. A successful plumber must have a thorough knowledge of hydraulic systems. They are patient individuals with a practical mind and manual dexterity, able to work efficiently with great attention to detail.", 
-            secondPage: false},
-        
-        {num: "07", title: "Mail Room", imgSrc: "assets/images/facility_management/mailroom.jpg",  
-            content: "Our core business revolves around running on-site service centres with mail and logistics, generally providing the hub for service delivery options.", 
-            secondPage: false},
-        
-        {num: "08", title: "Pest Control Management", imgSrc: "assets/images/facility_management/pest.jpg",  
+        {num: "10", title: "Pest Control Management", imgSrc: "assets/images/facility_management/pest.jpg",  
             content: "Timely preventive measures and effective treatment of pests is very essential to maintain the sanctity of the office premises. We not only take all the preventive measures to prevent any kind of infestation of the pests in the office but in any such situation our effective treatments are available to remove any such problem.", 
             secondPage: false},
-        
-        // {num: "09", title: "BMS (Building Management Services)", imgSrc: "assets/images/facility_management/bms.jpg", 
-        //     content: "A building management service (BMS) buildings that controls and monitors the building's mechanical and electrical equipment such as ventilation, Lighting, Power Systems, fire systems, and Security Systems.A BMS consists of software and hardware; the software program, Vendors are also producing a BMS that integrates the use of Internet Protocols.", 
-        //     secondPage: true},
-        
-        {num: "09", title: "Carpentry Lift Operation & Maintenance",  imgSrc: "assets/images/facility_management/carpentry.jpg", 
-            content: "We aware that the customers/clients that it is necessary to know your requirements thoroughly. This helps us to create unique and stunning designs on woodworks and we provide services are at is custom-made to your exact required specifications. From initial designing, creating and fitting, our expert carpenter will take care of woodwork that looks great and is long-lasting. We can also provide a free, no-obligation quote.", 
-            secondPage: false}
+
+        {num: "11", title: "Office Supplies", imgSrc: "assets/images/facility_management/office.jpg",  
+            content: "By the use of technology allows us to dramatically reduce our overheads, negotiate the best possible prices from the manufacturers & distributors. We are passing the benefits of these massive savings directly to our customers like you. You will always find our prices cheaper than anyone else in the market.", 
+            secondPage: false},
+
+        {num: "12", title: "Corporate Gifting", imgSrc: "assets/images/facility_management/gifting.jpg",  
+            content: "Best design, unparalleled price and quality products equipped with the world class customer service/support. We help you strengthen your business relationship pioneering a different, customized model of corporate gifting. ", 
+            secondPage: false},
     ];
 
     $scope.itFacilities = [
@@ -342,7 +335,7 @@ rjsmApp.controller('rjsmController', function($scope) {
         secondPage: false, imgSrc: "assets/images/automobiles/img.jpg"
         },
         {title: "BUY PRE-OWNED CARS", desc: "Looking for the perfect car to match your needs?", 
-        subDesc: "Tired of searching through different websites to get the car you like? And after the tedious process, get a mechanic to check if the car is in good condition? Well, that’s where we come in - We give you the best deals on wide range of TOP condition cars for you to choose from and also check the car for any mechanical problems and such.", 
+        subDesc: "Tired of searching through different websites to get the car you like? And after the tedious process, get a mechanic to check if the car is in good condition? Well, that's where we come in - We give you the best deals on wide range of TOP condition cars for you to choose from and also check the car for any mechanical problems and such.", 
         secondPage: false, imgSrc: "assets/images/automobiles/img1.jpg"
         },
         {title: "SELL USED CARS", desc: "Want to make a switch to a new car?", 
@@ -360,8 +353,8 @@ rjsmApp.controller('rjsmController', function($scope) {
     ];
 
     $scope.interiorDesigns = [
-        {title: "FIND THE BEST DEALS", desc: "Curate your experience with our innovative designs.", 
-        subDesc: "Look no futher, with our wide network we can offer you a deal like no one else on used cars and as well as get you the best mechanic to maintain the car in top condition.", 
+        {title: "INTERIOR DESIGN", desc: "Curate your experience with our innovative designs.", 
+        subDesc: "We are dedicated to getting to know you to carefully consider the smallest details. Through a collaborative process, we engage with clients on a personal level and aim to craft a custom experience.", 
         imgSrc: "assets/images/interior_design/img.jpg", hasList: false
         },
         {title: "A CUSTOM HOME, FOR A CUSTOM YOU.", desc: "Crafting interiors to its finest.", 
@@ -395,13 +388,59 @@ rjsmApp.controller('rjsmController', function($scope) {
         content: "All Brand devices, all repairs, we are your one-stop shop. We're probably the only one in town who do L4 chip-level repair on Logic boards, arguably :)"
         }
     ];
+
+    $scope.sliderMenu = [
+        {num: "01", class: "icn_slider home", src: "#/home", ngClass: "{'active' : curPage == 'home' && hash == ''}"},
+        {num: "02", class: "icn_slider about-us", src: "#/home#about-us", ngClass: "{'active' : curPage == 'about-us'}"},
+        {num: "03", class: "icn_slider services", src: "#/home#services", ngClass: "{'active' : curPage == 'services'}"},
+        {num: "04", class: "icn_slider clients", src: "#/home#clients", ngClass: "{'active' : curPage == 'clients'}"},
+        {num: "05", class: "icn_slider team", src: "#/home#team", ngClass: "{'active' : curPage == 'team'}"}
+    ];
+
+    $scope.clients = [
+        {imgSrc: "assets/images/clients/image.png"},
+        {imgSrc: "assets/images/clients/image3.jpg"},
+        {text: "itbrainy"},
+        {imgSrc: "assets/images/clients/image2.jpg"}
+    ];
+
+    $scope.hamburgerMenu = [
+        {ngClass: "{'active' : curPage == 'facility-management'}", src: "#/facility-management", text: "Facility Management", bottomMenu: false},
+        {ngClass: "{'active' : curPage == 'it'}", src: "#/it", text: "IT Solutions", bottomMenu: false},
+        {ngClass: "{'active' : curPage == 'electronics'}", src: "#/electronics", text: "Electronics", bottomMenu: false},
+        {ngClass: "{'active' : curPage == 'real-estate'}", src: "#/real-estate", text: "Real Estate", bottomMenu: false},
+        {ngClass: "{'active' : curPage == 'automobiles'}", src: "#/automobiles", text: "Automobiles", bottomMenu: false},
+        {ngClass: "{'active' : curPage == 'event-management'}", src: "#/event-management", text: "Event Management", bottomMenu: false},
+        {ngClass: "{'active' : curPage == 'interior-design'}", src: "#/interior-design", text: "Interior Design", bottomMenu: false},
+        {ngClass: "{'active' : curPage == 'about-us'}", src: "#/home#about-us", text: "About", bottomMenu: true},
+        {ngClass: "{'active' : curPage == 'clients'}", src: "#/home#clients", text: "Clients", bottomMenu: true},
+        {ngClass: "{'active' : curPage == 'contact-us'}", src: "#/home#contact-us", text: "Contact Us", bottomMenu: true}
+    ];
+
+    $scope.sliderImages = [
+        "assets/images/landing_page/img.jpg",
+        "assets/images/about_us/img-about-us.jpg",
+        "assets/images/about_us_more/img-more-about.jpg"
+    ];
+
+    $scope.teamMembers = [
+        {name: "Sagaya Stephen", designation: "FOUNDER CEO | SERVICES", imgSrc: "assets/images/team/ceo.jpg"},
+        {name: "Michael Paul J", designation: "OPERATION MANAGER", imgSrc: "assets/images/team/ops.jpg"},
+        {name: "Edwin", designation: "DEV OPS & IT", imgSrc: "assets/images/team/ceo.jpg"},
+        {name: "Sai Viswanathan", designation: "ENGINEER", imgSrc: "assets/images/team/ceo.jpg"},
+        {name: "Cryssac Franson Aldo", designation: "CREATIVE DESIGN HEAD", imgSrc: "assets/images/team/ceo.jpg"},
+        {name: "Kevin John", designation: "PRODUCT DESIGNER", imgSrc: "assets/images/team/designer.jpg"},
+        {name: "Vineeth Kumar", designation: "ENGINEER", imgSrc: "assets/images/team/ceo.jpg"},
+        {name: "Vinoth Pandian", designation: "ENGINEER", imgSrc: "assets/images/team/ceo.jpg"}
+    ]
 });
 
 function fullPageInit() {
     $('#fullpage-home').fullpage({
-        anchors: ["/home", "/home#services"],
+        anchors: ["/home", "/home#about-us", "/home#about-us", "/home#services", "/home#clients", "/home#team"],
         sectionSelector: '.home-content',
         scrollingSpeed: 1000,
+        normalScrollElements: '#footer-content',
         onLeave: function(index, nextIndex, direction) {
             $('#scroll-div').hide();
         },
@@ -419,7 +458,8 @@ function slickInit() {
         arrows: true,
         prevArrow: $('#img-nav .left'),
         nextArrow: $('#img-nav .right,'),
-        useTransform: false
+        useTransform: false,
+        autoplay: true
     });
 }
 
