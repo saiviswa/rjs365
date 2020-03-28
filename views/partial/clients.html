@@ -9,7 +9,7 @@
     </div>
     <div class="clientLogos" ng-repeat="client in clients">
         <div class="service-img">
-            <img src="{{client.imgSrc}}" ng-if="client.imgSrc">
+            <img ng-if="client.imgSrc" ng-src="{{client.imgSrc}}">
             <p ng-if="client.text">{{client.text}}</p>
         </div>
     </div>

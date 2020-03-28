@@ -44,6 +44,9 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider',
                     },
                     "footerContent": {
                         templateUrl: "views/layout/footer.html"
+                    },
+                    "hamburgerView": {
+                        templateUrl: "views/partial/hamburger.html"
                     }
                 },
                 data: {
@@ -61,6 +64,9 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider',
                     },
                     "footerContent": {
                         templateUrl: "views/layout/footer.html"
+                    },
+                    "hamburgerView": {
+                        templateUrl: "views/partial/hamburger.html"
                     }
                 },
                 data: {
@@ -78,6 +84,9 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider',
                     },
                     "footerContent": {
                         templateUrl: "views/layout/footer.html"
+                    },
+                    "hamburgerView": {
+                        templateUrl: "views/partial/hamburger.html"
                     }
                 },
                 data: {
@@ -95,6 +104,9 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider',
                     },
                     "footerContent": {
                         templateUrl: "views/layout/footer.html"
+                    },
+                    "hamburgerView": {
+                        templateUrl: "views/partial/hamburger.html"
                     }
                 },
                 data: {
@@ -112,6 +124,9 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider',
                     },
                     "footerContent": {
                         templateUrl: "views/layout/footer.html"
+                    },
+                    "hamburgerView": {
+                        templateUrl: "views/partial/hamburger.html"
                     }
                 },
                 data: {
@@ -129,6 +144,9 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider',
                     },
                     "footerContent": {
                         templateUrl: "views/layout/footer.html"
+                    },
+                    "hamburgerView": {
+                        templateUrl: "views/partial/hamburger.html"
                     }
                 },
                 data: {
@@ -146,10 +164,30 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider',
                     },
                     "footerContent": {
                         templateUrl: "views/layout/footer.html"
+                    },
+                    "hamburgerView": {
+                        templateUrl: "views/partial/hamburger.html"
                     }
                 },
                 data: {
                     css: ['assets/css/main.css', 'assets/css/electronics.css']
+                }
+            })
+            .state('contact', {
+                url: "/contact-us",
+                views: {
+                    "headerContent": {
+                        templateUrl: "views/layout/header.html"
+                    },
+                    "mainContent": {
+                        templateUrl: "views/partial/contact.html"
+                    },
+                    "hamburgerView": {
+                        templateUrl: "views/partial/hamburger.html"
+                    }
+                },
+                data: {
+                    css: ['assets/css/main.css', 'assets/css/contact.css']
                 }
             });
         $urlRouterProvider.otherwise("home");
@@ -166,8 +204,6 @@ rjsmApp.config(['$stateProvider', '$urlRouterProvider',
         $rootScope.$on('$locationChangeSuccess', function(event, newState, oldState) {
             $rootScope.hash = $location.hash();
             sliderMenu($rootScope.hash);
-            console.log("old state " + oldState);
-            console.log("new state " + newState);
         });
         $rootScope.$on('$viewContentLoaded', function(event) {
             if (typeof $.fn.fullpage.destroy === 'function') {
@@ -204,7 +240,7 @@ rjsmApp.controller('rjsmController', function($scope) {
 
     $scope.aboutUs = [
         {title: "AN OVERVIEW", desc: "We will help you with what we have learnt", 
-            subDesc: "RJS365 is a full-service IT Cloud and Facility management services provider specializing in Network Firewalls and servers support, and maintenance. Right now we support businesses only in Bangalore. We are providing IT management services for Firewall, Network and Server Installations including maintenance and support. Fully qualified and certificated people work with us. We can provide L1, L2, L3 services, support, and design & implement networks. We work with small and medium sized companies. Company ability to work on different projects in term of Qualification and certifications of employees.", 
+            subDesc: "RJS365 is a full service for all your day to day office needs in Facility Management, IT Cloud Solutions, Electronics, Real Estate, Interior and Automobiles etc,,,.Solutions. We have specialising in all the above services with fully qualified and certificated resources in our organisations who work with us. We can provide in various levels of resources like L1,L2 and L3 Services, Support and design and implement on all your needs, We work with small and medium sized companies. Company ability to work on different projects in term of Qualification and certifications of employees.", 
             imgSrc: "assets/images/about_us/img-about-us.jpg"},
         {title: "WE ARE FRIENDLY", desc: "How we engage customers", 
             subDesc: "We are a bunch of experts holding years and years of experience in services and solutions. Our team is highly knowledgeable and functional to meet any kind of business needs as and when needed. RJS 365 can work in a tight turnaround time and can yet deliver un-compromised quality services. Finest solutions at a competitive rate are what that makes us fit our client's budget and needs. We believe in overcoming challenges through our specialised values and teamwork spirit.", 
@@ -213,14 +249,14 @@ rjsmApp.controller('rjsmController', function($scope) {
 
     $scope.facilities = [
         {num: "01", title: "Admin / Front Office / Receptionist", imgSrc: "assets/images/facility_management/front_office.jpg", 
-            content: "We offer highly-skilled and self-motivated front office workers, who will play a key role by performing various administrative and clerical tasks, undertaking a variety of activities in the office, including filing, answering the phone, organizing documents, basic bookkeeping, and more. Reliability and a strong work ethic combined with great communication skills.", 
+            content: "We Offer Highly-Skilled and self-motivated resources of Admin/Receptionist, who will play a key role by performing various administrative and front offie management and clerical task, undertaking a variety of activities in the facility/office management, visitor Management, vendor management, including filing, answering the phone calls, and organising documentations as per government /company policies and more. Reliability and a strong work ethic combined with great communication skills.", 
             secondPage: false},
         
         {num: "02", title: "Security", imgSrc: "assets/images/facility_management/security.jpg", 
-            content: "We provide trained security guards to any business establishments, residential apartments, a person or a property.", 
+            content: "We have a dedicated team of professionals who are highly talented and well experienced in providing effective guarding solutions. Our Security services in Bengaluru to all Business establishments and Apartments. We are specialised in providing high-end security guard services for all sectors such as Corporate, Hotels, Malls, Manufacturing, Hospitality, IT, Residential, Education, banks, financial institutions etc...", 
             secondPage: false},
         
-        {num: "03", title: "Housekeeping", imgSrc: "assets/images/facility_management/house-keeping.jpg",  
+        {num: "03", title: "Housekeeping Services", imgSrc: "assets/images/facility_management/house-keeping.jpg",  
             content: "It's not just about better cleaning, it's about a better overall experience. One that's easy, thorough, and that comes with a great working relationship. So we start with a meeting to determine if our culture is a good fit with your culture and then we help you determine exactly the services you want or need.", 
             secondPage: false},
         
@@ -407,14 +443,14 @@ rjsmApp.controller('rjsmController', function($scope) {
     $scope.hamburgerMenu = [
         {ngClass: "{'active' : curPage == 'facility-management'}", src: "#/facility-management", text: "Facility Management", bottomMenu: false},
         {ngClass: "{'active' : curPage == 'it'}", src: "#/it", text: "IT Solutions", bottomMenu: false},
-        {ngClass: "{'active' : curPage == 'electronics'}", src: "#/electronics", text: "Electronics", bottomMenu: false},
         {ngClass: "{'active' : curPage == 'real-estate'}", src: "#/real-estate", text: "Real Estate", bottomMenu: false},
+        {ngClass: "{'active' : curPage == 'electronics'}", src: "#/electronics", text: "Electronics", bottomMenu: false},
+        {ngClass: "{'active' : curPage == 'interior-design'}", src: "#/interior-design", text: "Interior Design", bottomMenu: false},
         {ngClass: "{'active' : curPage == 'automobiles'}", src: "#/automobiles", text: "Automobiles", bottomMenu: false},
         {ngClass: "{'active' : curPage == 'event-management'}", src: "#/event-management", text: "Event Management", bottomMenu: false},
-        {ngClass: "{'active' : curPage == 'interior-design'}", src: "#/interior-design", text: "Interior Design", bottomMenu: false},
         {ngClass: "{'active' : curPage == 'about-us'}", src: "#/home#about-us", text: "About", bottomMenu: true},
         {ngClass: "{'active' : curPage == 'clients'}", src: "#/home#clients", text: "Clients", bottomMenu: true},
-        {ngClass: "{'active' : curPage == 'contact-us'}", src: "#/home#contact-us", text: "Contact Us", bottomMenu: true}
+        {ngClass: "{'active' : curPage == 'contact-us'}", src: "#/contact-us", text: "Contact Us", bottomMenu: true}
     ];
 
     $scope.sliderImages = [
@@ -432,7 +468,7 @@ rjsmApp.controller('rjsmController', function($scope) {
         {name: "Kevin John", designation: "PRODUCT DESIGNER", imgSrc: "assets/images/team/designer.jpg"},
         {name: "Vineeth Kumar", designation: "ENGINEER", imgSrc: "assets/images/team/ceo.jpg"},
         {name: "Vinoth Pandian", designation: "ENGINEER", imgSrc: "assets/images/team/ceo.jpg"}
-    ]
+    ];
 });
 
 function fullPageInit() {
